@@ -3,6 +3,7 @@
 from model import User, File, Template, Photocard, db, connect_to_db
 
 def create_user(email, password):
+    """Creates a new user"""
     user = User(email=email, password=password)
 
     db.session.add(user)
@@ -10,7 +11,13 @@ def create_user(email, password):
 
     return user
 
+def find_email(email):
+    """Find a user using their email"""
+    return User.query.filter(User.email == email).first()
+
+
 def create_file(title):
+    """Creates a file"""
     template_title = File(title=title)
 
     db.session.add(template_title)
