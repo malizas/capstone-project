@@ -14,8 +14,11 @@ class User(db.Model):
     email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(50))
 
+    #files = list of File objects
+
     def __repr__(self):
         return f'<User user_id={self.user_id} email={self.email}>'
+
 
 class File(db.Model):
     """File Information"""
@@ -28,8 +31,13 @@ class File(db.Model):
     title = db.Column(db.String(30))
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 
+    user = db.relationship("User", backref="files")
+    #templates = list of Template objects
+
+
     def __repr__(self):
         return f'<File file_id={self.file_id} title={self.title}>'
+
 
 class Template(db.Model):
     """Template Creator Information"""
@@ -42,8 +50,12 @@ class Template(db.Model):
     photocard_id = db.Column(db.Integer, db.ForeignKey('photocards.photocard_id'))
     file_id = db.Column(db.Integer, db.ForeignKey('files.file_id'))
 
+    photocards = db.relationship("Photocard", backref="templates")
+    files = db.relationship("File", backref="templates")
+
     def __repr__(self):
         return f'<Template template_id={self.template_id}>'
+
 
 class Photocard(db.Model):
     """Photocard Information"""
@@ -57,6 +69,8 @@ class Photocard(db.Model):
     pc_group = db.Column(db.String)
     pc_album = db.Column(db.String)
     pc_img = db.Column(db.String)
+
+    #templates = list of Template objects
 
     def __repr__ (self):
         return f'<Photocard photocard_id={self.photocard_id} pc_name={self.pc_name} pc_group={self.pc_group} pc_album={self.pc_group}>'
