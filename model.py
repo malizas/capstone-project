@@ -52,11 +52,10 @@ class Template(db.Model):
     font_family = db.Column(db.String)
     font_color = db.Column(db.String)
     bg_color = db.Column(db.String)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
 
     user = db.relationship("User", backref="templates")
     photocards = db.relationship("Photocard", secondary="pc_picked", backref="templates")
-    #pc_picked = list of PC_Picked objects
 
     def __repr__(self):
         return f'<Template template_id={self.template_id} user_id={self.user_id}>'
@@ -72,9 +71,6 @@ class PC_Picked(db.Model):
                     primary_key=True)
     template_id = db.Column(db.Integer, db.ForeignKey('templates.template_id'), nullable=False)
     photocard_id = db.Column(db.Integer, db.ForeignKey('photocards.photocard_id'), nullable=False)
-
-    templates = db.relationship("Template", backref="pc_picked")
-    photocards = db.relationship("Photocard", backref="pc_picked")
 
     def __repr__(self):
         return f'<PC_Picked pc_picked_id={self.pc_picked_id} template_id={self.template_id} photocard_id={self.photocard_id}>'
@@ -92,10 +88,9 @@ class Photocard(db.Model):
     pc_album = db.Column(db.String(50))
     pc_img = db.Column(db.String)
 
-    #pc_picked = list of PC_Picked objects
 
     def __repr__ (self):
-        return f'<Photocard photocard_id={self.photocard_id} pc_name={self.pc_name} pc_group={self.pc_group} pc_album={self.pc_album}>'
+        return f'<Photocard photocard_id={self.photocard_id} pc_name={self.pc_name} pc_album={self.pc_album} pc_group={self.pc_group}>'
 
 
 def connect_to_db(app, db_name):

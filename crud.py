@@ -17,7 +17,7 @@ def find_email(email):
 
 def create_template(font_family, font_color, bg_color):
     """Creates a new template"""
-    template = User(font_family=font_family, font_color=font_color, bg_color=bg)
+    template = User(font_family=font_family, font_color=font_color, bg_color=bg_color)
 
 if __name__ == "__main__":
     from flask import Flask
