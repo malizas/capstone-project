@@ -11,51 +11,73 @@ class User(db.Model):
     user_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)
-    email = db.Column(db.String(50), unique=True)
-    password = db.Column(db.String(50))
+    email = db.Column(db.String(50), unique=True, nullable = False)
+    password = db.Column(db.String(50), nullable = False)
 
-    #files = list of File objects
+    #files = list of File objects; optional
+    #templates = list of Template objects
 
     def __repr__(self):
         return f'<User user_id={self.user_id} email={self.email}>'
 
 
-class File(db.Model):
-    """File Information"""
+# class File(db.Model):
+#     """File Information, can be optional"""
 
-    __tablename__ = "files"
+#     __tablename__ = "files"
 
-    file_id = db.Column(db.Integer,
-                        autoincrement=True,
-                        primary_key=True)
-    title = db.Column(db.String(30))
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+#     file_id = db.Column(db.Integer,
+#                         autoincrement=True,
+#                         primary_key=True)
+#     title = db.Column(db.String(30))
+#     file_url = db.Column(db.String)
+#     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+#     template_id = db.Column(db.Integer, db.ForeignKey('templates.template_id'))
 
-    user = db.relationship("User", backref="files")
-    #templates = list of Template objects
+#     user = db.relationship("User", backref="files")
 
 
-    def __repr__(self):
-        return f'<File file_id={self.file_id} title={self.title}>'
+#     def __repr__(self):
+#         return f'<File file_id={self.file_id} title={self.title}>'
 
 
 class Template(db.Model):
     """Template Creator Information"""
 
-    __tablename__ = "template_creator"
+    __tablename__ = "templates"
 
     template_id = db.Column(db.Integer,
                     autoincrement=True,
                     primary_key=True)
-    photocard_id = db.Column(db.Integer, db.ForeignKey('photocards.photocard_id'))
-    file_id = db.Column(db.Integer, db.ForeignKey('files.file_id'))
+    font_family = db.Column(db.String)
+    font_color = db.Column(db.String)
+    bg_color = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 
-    photocards = db.relationship("Photocard", backref="templates")
-    file = db.relationship("File", backref="templates")
+    user = db.relationship("User", backref="templates")
+    photocards = db.relationship("Photocard", secondary="pc_picked", backref="templates")
+    #pc_picked = list of PC_Picked objects
 
     def __repr__(self):
-        return f'<Template template_id={self.template_id}>'
+        return f'<Template template_id={self.template_id} user_id={self.user_id}>'
 
+
+class PC_Picked(db.Model):
+    """Photocards Picked for the Template"""
+
+    __tablename__= "pc_picked"
+
+    pc_picked_id = db.Column(db.Integer,
+                    autoincrement=True,
+                    primary_key=True)
+    template_id = db.Column(db.Integer, db.ForeignKey('templates.template_id'), nullable=False)
+    photocard_id = db.Column(db.Integer, db.ForeignKey('photocards.photocard_id'), nullable=False)
+
+    templates = db.relationship("Template", backref="pc_picked")
+    photocards = db.relationship("Photocard", backref="pc_picked")
+
+    def __repr__(self):
+        return f'<PC_Picked pc_picked_id={self.pc_picked_id} template_id={self.template_id} photocard_id={self.photocard_id}>'
 
 class Photocard(db.Model):
     """Photocard Information"""
@@ -65,15 +87,15 @@ class Photocard(db.Model):
     photocard_id = db.Column(db.Integer,
                     autoincrement=True,
                     primary_key=True)
-    pc_name = db.Column(db.String)
-    pc_group = db.Column(db.String)
-    pc_album = db.Column(db.String)
+    pc_name = db.Column(db.String(30))
+    pc_group = db.Column(db.String(30))
+    pc_album = db.Column(db.String(50))
     pc_img = db.Column(db.String)
 
-    #templates = list of Template objects
+    #pc_picked = list of PC_Picked objects
 
     def __repr__ (self):
-        return f'<Photocard photocard_id={self.photocard_id} pc_name={self.pc_name} pc_group={self.pc_group} pc_album={self.pc_group}>'
+        return f'<Photocard photocard_id={self.photocard_id} pc_name={self.pc_name} pc_group={self.pc_group} pc_album={self.pc_album}>'
 
 
 def connect_to_db(app, db_name):
