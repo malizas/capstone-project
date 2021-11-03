@@ -43,13 +43,15 @@ def user_login():
         flash('Login failed, please double check email or password')
         return redirect('/login')
 
-    return redirect('/template')
+    return redirect('/files')
 
+@app.route('/files')
+def files():
+    return render_template('files.html')
 
 @app.route('/template')
 def template_creator():
     return render_template('template.html')
-
 
 if __name__ == '__main__':
     connect_to_db(app, "photocards")

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Log In - Register{% endblock %}
+
+{% block body %}
+<h3>login or register</h3>
+<form action="/user" method="POST">
+    <h3>register</h3>
+    <p>
+      Email <input type="text" name="email">
+    </p>
+    <p>
+      Password <input type="password" name="password">
+    </p>
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+
+  <form action="/login" method="POST">
+    <h3>login</h3>
+    <p>
+      Email <input type="text" name="email">
+    </p>
+    <p>
+      Password <input type="password" name="password">
+    </p>
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+{% endblock %}
