@@ -1,6 +1,6 @@
 """Create, Read, Update, Delete (CRUD) Functions"""
 
-from model import User, File, Template, Photocard, db, connect_to_db
+from model import User, File, db, connect_to_db
 
 def create_user(email, password):
     """Creates a new user"""

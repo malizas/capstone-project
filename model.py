@@ -51,7 +51,7 @@ class Template(db.Model):
     file_id = db.Column(db.Integer, db.ForeignKey('files.file_id'))
 
     photocards = db.relationship("Photocard", backref="templates")
-    files = db.relationship("File", backref="templates")
+    file = db.relationship("File", backref="templates")
 
     def __repr__(self):
         return f'<Template template_id={self.template_id}>'

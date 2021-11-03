@@ -16,34 +16,39 @@ def homepage():
 def login():
     return render_template('login.html')
 
-@app.route('/user', method=["POST"])
+@app.route('/user', methods=['POST'])
 def user_registration():
-    email = request.form.get("email")
-    password = request.form.get("password")
+    email = request.form.get('email')
+    password = request.form.get('password')
 
     if crud.find_email(email):
         flash('Use already exist, please try again or login')
+        return redirect('/login')
     else:
         crud.create_user(email, password)
         flash('Registration complete, please login')
+        return redirect('/login')
 
-    return redirect('/')
+@app.route('/login', methods=['POST'])
+def user_login():
+    email = request.form.get('email')
+    password = request.form.get('password')
+
+    user = crud.find_email(email)
+
+    if user and password==user.password:
+        session['user_id'] = user.user_id
+        flash('Log in sucessful!')
+    else:
+        flash('Login failed, please double check email or password')
+        return redirect('/login')
+
+    return redirect('/template')
 
 
-# @app.route('/login', method=["POST"])
-# def user_login():
-#     email = request.form.get("email")
-#     password = request.form.get("password")
-
-#     user = crud.find_email(email)
-
-#     if user and password == user.email:
-#         session['user_id'] = user.user_id
-#         flash('Sucessfully logged in!')
-#     else:
-#         flash('Login failed, please double check email or password')
-
-#     return redirect('/')
+@app.route('/template')
+def template_creator():
+    return render_template('template.html')
 
 
 if __name__ == '__main__':
