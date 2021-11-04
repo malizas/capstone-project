@@ -4,9 +4,14 @@ from flask import (Flask, render_template, request, flash, session,
                 redirect, Markup)
 from model import connect_to_db
 import crud
+# import cloudinary.uploader
+import os
 
 app = Flask(__name__)
 app.secret_key = "dev"
+
+# CLOUDINARY_KEY = os.environ['api_key']
+# CLOUDINARY_SECRET = os.environ['api_secret']
 
 @app.route('/')
 def homepage():
@@ -54,5 +59,5 @@ def template_creator():
     return render_template('template.html')
 
 if __name__ == '__main__':
-    connect_to_db(app, "photocards")
+    connect_to_db(app)
     app.run(debug=True, host='0.0.0.0')
