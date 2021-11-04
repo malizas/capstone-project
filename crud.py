@@ -1,6 +1,6 @@
 """Create, Read, Update, Delete (CRUD) Functions"""
 
-from model import User, Template, Photocard, db, connect_to_db
+from model import User, Template, PC_Picked, Photocard, db, connect_to_db
 
 def create_user(email, password):
     """Creates a new user"""
@@ -65,6 +65,20 @@ def temp_by_user(user):
 def find_template(template_id):
     """Returns a template object using template_id"""
     return Template.query.get(template_id)
+
+def create_pc_picked(template_id, photocard_id):
+    """Create a table of the pcs picked for template"""
+    temp = find_template(template_id)
+    pc = pc_by_id(photocard_id)
+
+    pc_picked_for_template = PC_Picked(template=temp, photocard=pc)
+    
+    db.session.add(pc_picked_for_template)
+    db.session.commit()
+
+def template_by_pc_pick(template_id):
+    """Return the template with each photocards"""
+    return PC_Picked.query.filter(PC_Picked.template_id == template_id).all()
 
 
 if __name__ == "__main__":

@@ -3,10 +3,10 @@
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
-association_table = db.Table('pc_picked',
-                    db.Column('template_id', db.Integer, db.ForeignKey('templates.template_id')),
-                    db.Column('photocard_id', db.Integer, db.ForeignKey('photocards.photocard_id'))
-                    )
+# association_table = db.Table('pc_picked',
+#                     db.Column('template_id', db.Integer, db.ForeignKey('templates.template_id')),
+#                     db.Column('photocard_id', db.Integer, db.ForeignKey('photocards.photocard_id'))
+#                     )
 
 class User(db.Model):
     """User Information"""
@@ -39,24 +39,29 @@ class Template(db.Model):
 
     user = db.relationship("User", backref="templates")
     #photocards = db.relationship("Photocard", secondary="pc_picked", backref="templates")
-    photocards = db.relationship("Photocard", secondary=association_table)
+    #photocards = db.relationship("Photocard", secondary=association_table)
+
+    #pc_picked = list of PC_Picked objects
 
     def __repr__(self):
         return f'<Template template_id={self.template_id} user_id={self.user_id}>'
 
-# class PC_Picked(db.Model):
-#     """Photocards Picked for the Template"""
+class PC_Picked(db.Model):
+    """Photocards Picked for the Template"""
 
-#     __tablename__= "pc_picked"
+    __tablename__= "pc_picked"
 
-#     pc_picked_id = db.Column(db.Integer,
-#                     autoincrement=True,
-#                     primary_key=True)
-#     template_id = db.Column(db.Integer, db.ForeignKey('templates.template_id'), nullable=False)
-#     photocard_id = db.Column(db.Integer, db.ForeignKey('photocards.photocard_id'), nullable=False)
+    pc_picked_id = db.Column(db.Integer,
+                    autoincrement=True,
+                    primary_key=True)
+    template_id = db.Column(db.Integer, db.ForeignKey('templates.template_id'), nullable=False)
+    photocard_id = db.Column(db.Integer, db.ForeignKey('photocards.photocard_id'), nullable=False)
 
-#     def __repr__(self):
-#         return f'<PC_Picked pc_picked_id={self.pc_picked_id} template_id={self.template_id} photocard_id={self.photocard_id}>'
+    template = db.relationship("Template", backref="pc_picked")
+    photocard = db.relationship("Photocard", backref="pc_picked")
+
+    def __repr__(self):
+        return f'<PC_Picked pc_picked_id={self.pc_picked_id} template_id={self.template_id} photocard_id={self.photocard_id}>'
 
 class Photocard(db.Model):
     """Photocard Information"""
@@ -71,6 +76,7 @@ class Photocard(db.Model):
     pc_album = db.Column(db.String(50))
     pc_img = db.Column(db.String)
 
+    #pc_picked = list of PC_Picked objects
 
     def __repr__ (self):
         return f'<Photocard photocard_id={self.photocard_id} pc_name={self.pc_name} pc_album={self.pc_album} pc_group={self.pc_group}>'

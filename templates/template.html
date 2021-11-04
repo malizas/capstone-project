@@ -8,23 +8,19 @@
     <div class="column">
         <p> template creator will be here </p>
     </div>
-    <div class="column" style="height:500px;width:700px;border:1 px solid #ccc;overflow:auto;">
+    <div class="column" style="height:500px;width:700px;border:1 px solid gray;overflow:auto;">
         <table>
             <tr>
-                <th>Photocard 1</th>
-                <th>Photocard 2</th>
-                <th>Photocard 3</th>
-                <th>Photocard 4</th>
-              </tr>
-              {% for photocard in photocards %}
-              <tr>
-                <td><img src="{{ photocard.pc_img }}" width="120px" height="auto"></td>
+                {% for i in range(1,6)%}
+                <td>Photocard Image {{ i }}</td>
+                {% endfor %}
             </tr>
             <tr>
-                <td><b>{{ photocard.pc_name }}</b></td>
+                {% for i in range(1,6)%}
+                <td>photocard Name {{ i }}</td>
+                {% endfor %}
             </tr>
-            {% endfor %}
-        </table>
+          </table>
     </div>
   </div>
 {% endblock %}

@@ -8,10 +8,11 @@
     {% for temp in user_temps %}
     <tr>
         <th> Template {{ temp.template_id }}</th>
-        <td>templates</td>
+        <td>template_url</td>
     </tr>
     {% endfor %}
 </table>
+
 <form action='/template_creator'>
     <button type="submit" id="to_templates">To Template Creator</button>
 </form>
