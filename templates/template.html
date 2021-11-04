@@ -3,6 +3,28 @@
 {% block title %} Template Creator{% endblock %}
 
 {% block body %}
-<h1> coming soon!</h1>
-<p> template creator will be here </p>
+<h1> template creator </h1>
+<div class="row">
+    <div class="column">
+        <p> template creator will be here </p>
+    </div>
+    <div class="column" style="height:500px;width:700px;border:1 px solid #ccc;overflow:auto;">
+        <table>
+            <tr>
+                <th>Photocard 1</th>
+                <th>Photocard 2</th>
+                <th>Photocard 3</th>
+                <th>Photocard 4</th>
+              </tr>
+              {% for photocard in photocards %}
+              <tr>
+                <td><img src="{{ photocard.pc_img }}" width="120px" height="auto"></td>
+            </tr>
+            <tr>
+                <td><b>{{ photocard.pc_name }}</b></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+  </div>
 {% endblock %}

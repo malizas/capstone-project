@@ -51,12 +51,16 @@ def pc_by_album(pc_album):
     return Photocard.query.filter(Photocard.pc_album==pc_album).all()
 
 
-def create_template(font_family, font_color, bg_color):
+def create_template(font_family, font_color, bg_color, user):
     """Creates a new template"""
-    template = Template(font_family=font_family, font_color=font_color, bg_color=bg_color)
+    template = Template(font_family=font_family, font_color=font_color, bg_color=bg_color, user=user)
 
     db.session.add(template)
     db.session.commit()
+
+def temp_by_user(user):
+    """Returns templates associated with user"""
+    return Template.query.filter(Template.user_id == user).all()
 
 def find_template(template_id):
     """Returns a template object using template_id"""

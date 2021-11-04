@@ -32,18 +32,17 @@ class Template(db.Model):
     template_id = db.Column(db.Integer,
                     autoincrement=True,
                     primary_key=True)
-    font_family = db.Column(db.String)
-    font_color = db.Column(db.String)
-    bg_color = db.Column(db.String)
+    font_family = db.Column(db.String, nullable=True)
+    font_color = db.Column(db.String, nullable=True)
+    bg_color = db.Column(db.String, nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
 
-    users = db.relationship("User", backref="templates")
+    user = db.relationship("User", backref="templates")
     #photocards = db.relationship("Photocard", secondary="pc_picked", backref="templates")
     photocards = db.relationship("Photocard", secondary=association_table)
 
     def __repr__(self):
         return f'<Template template_id={self.template_id} user_id={self.user_id}>'
-
 
 # class PC_Picked(db.Model):
 #     """Photocards Picked for the Template"""

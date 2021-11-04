@@ -48,15 +48,19 @@ def user_login():
         flash('Login failed, please double check email or password')
         return redirect('/login')
 
-    return redirect('/files')
+    return redirect('/template_files')
 
-@app.route('/files')
+@app.route('/template_files')
 def files():
-    return render_template('files.html')
+    flash(f'User {session["user_id"]}')
+    user_temps = crud.temp_by_user(session["user_id"])
+    return render_template('files.html', user_temps=user_temps)
 
-@app.route('/template')
+@app.route('/template_creator')
 def template_creator():
-    return render_template('template.html')
+    flash(f'User {session["user_id"]}')
+    photocards = crud.all_photocards()
+    return render_template('template.html', photocards=photocards)
 
 if __name__ == '__main__':
     connect_to_db(app)
