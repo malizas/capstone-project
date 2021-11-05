@@ -13,6 +13,18 @@
         <p> template creator will be here </p>
     </div>
     <div class="column" style="height:600px;width:700px;border:1px solid gray;overflow:auto;">
+      <div class="navbar">
+        <input type="text" placeholder="search...">
+        <button id="search"> search </button>
+
+        <select name="groups" id="groups">
+          <option value="bts">bts</option>
+          <option value="stray kids">stray kids</option>
+          <option value="ateez">ateez</option>
+        </select>
+        
+      </div>
+
         <ul>
             {% for card in photocards %}
             <li><input type="checkbox" id="cb{{ card.photocard_id }}" />

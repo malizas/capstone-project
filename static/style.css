@@ -9,6 +9,24 @@
     clear: both;
 }
 
+.navbar {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  padding: 5px;
+}
+
+#search {
+  float: left;
+}
+
+.navbar input[type=text] {
+  float: left;
+}
+
+#groups {
+  float: right;
+}
+
 ul {
   list-style-type: none;
 }
