@@ -4,23 +4,24 @@
 
 {% block body %}
 <h1> template creator </h1>
+
 <div class="row">
     <div class="column">
         <p> template creator will be here </p>
     </div>
     <div class="column" style="height:500px;width:700px;border:1 px solid gray;overflow:auto;">
-        <table>
-            <tr>
-                {% for card in photocards %}
-                <td><img src="{{card.pc_img}}" width="100px" height="auto"></td>
-                {% endfor %}
-            </tr>
-            <tr>
-                {% for card in photocards %}
-                <td style="text-align:center">{{ card.pc_name }}</td>
-                {% endfor %}
-            </tr>
-          </table>
+        <ul>
+            {% for num in [photocards|length] %}
+            {% for card in photocards %}
+            <li><input type="checkbox" id="cb{{ num }}" />
+              <label for="cb{{ num }}"><img src="{{card.pc_img}}" />
+                <br>{{ card.pc_name }}</br>
+            </label>
+            </li>
+            {% endfor %}
+            {% endfor %}
+          </ul>
     </div>
   </div>
+
 {% endblock %}
