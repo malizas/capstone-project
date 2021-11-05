@@ -11,13 +11,13 @@
     <div class="column" style="height:500px;width:700px;border:1 px solid gray;overflow:auto;">
         <table>
             <tr>
-                {% for i in range(1,6)%}
-                <td>Photocard Image {{ i }}</td>
+                {% for card in photocards %}
+                <td><img src="{{card.pc_img}}" width="100px" height="auto"></td>
                 {% endfor %}
             </tr>
             <tr>
-                {% for i in range(1,6)%}
-                <td>photocard Name {{ i }}</td>
+                {% for card in photocards %}
+                <td style="text-align:center">{{ card.pc_name }}</td>
                 {% endfor %}
             </tr>
           </table>

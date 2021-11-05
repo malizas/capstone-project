@@ -58,6 +58,9 @@ def create_template(font_family, font_color, bg_color, user):
     db.session.add(template)
     db.session.commit()
 
+def all_templates():
+    return Template.query.all()
+
 def temp_by_user(user):
     """Returns templates associated with user"""
     return Template.query.filter(Template.user_id == user).all()

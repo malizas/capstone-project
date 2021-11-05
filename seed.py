@@ -2,7 +2,7 @@
 
 import os
 import json
-from random import choice
+from random import choice, randint
 import crud, model, server
 
 os.system('dropdb ratings')
@@ -35,3 +35,8 @@ for n in range(1,5):
         bg_color = ["pink", "white", "beige"]
 
         crud.create_template(choice(font_family), choice(font_color), choice(bg_color), user_temp)
+
+for number in range(10):
+    random_temp = randint(1,5)
+    random_pc = randint(1,6)
+    crud.create_pc_picked(random_temp, random_pc)
