@@ -21,7 +21,7 @@ for photocard in pc_data:
     photocards_to_add = crud.create_photocard(pc_name, pc_group, pc_album, pc_img)
     photocards_db.append(photocards_to_add)
 
-for n in range(1,5):
+for n in range(5):
     email = f'user{n}@test.com'
     password = 'testing'
 
@@ -36,7 +36,13 @@ for n in range(1,5):
 
         crud.create_template(choice(font_family), choice(font_color), choice(bg_color), user_temp)
 
-for number in range(10):
-    random_temp = randint(1,5)
-    random_pc = randint(1,6)
-    crud.create_pc_picked(random_temp, random_pc)
+    for number in range(1,3):
+        #what i want to do: get a random number from the length of the templates and photocards
+        #taking that random number, and put it into create_pc_picked
+        all_temps = crud.all_templates()
+        random_temp = choice(all_temps)
+        all_pcs = crud.all_photocards()
+        random_pc = choice(all_pcs)
+
+
+        crud.create_pc_picked(random_temp.template_id, random_pc.photocard_id)

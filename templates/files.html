@@ -3,12 +3,16 @@
 {% block title %}Files{% endblock %}
 
 {% block body %}
+<form action="/logout" method="POST">
+    <button id="logout">Log Out</button>
+</form>
+
 <h1> template files </h1>
 <table>
     {% for temp in user_temps %}
     <tr>
         <th> Template {{ temp.template_id }}</th>
-        <td>template_url</td>
+        <td>{{ temp.template_id }}</td>
     </tr>
     {% endfor %}
 </table>

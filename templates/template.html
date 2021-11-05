@@ -3,22 +3,23 @@
 {% block title %} Template Creator{% endblock %}
 
 {% block body %}
+<form action='/template_files'>
+  <button type="submit" id="back_files">Back to Files</button>
+</form>
 <h1> template creator </h1>
 
 <div class="row">
     <div class="column">
         <p> template creator will be here </p>
     </div>
-    <div class="column" style="height:500px;width:700px;border:1 px solid gray;overflow:auto;">
+    <div class="column" style="height:600px;width:700px;border:1px solid gray;overflow:auto;">
         <ul>
-            {% for num in [photocards|length] %}
             {% for card in photocards %}
-            <li><input type="checkbox" id="cb{{ num }}" />
-              <label for="cb{{ num }}"><img src="{{card.pc_img}}" />
+            <li><input type="checkbox" id="cb{{ card.photocard_id }}" />
+              <label for="cb{{ card.photocard_id }}"><img src="{{card.pc_img}}" />
                 <br>{{ card.pc_name }}</br>
             </label>
             </li>
-            {% endfor %}
             {% endfor %}
           </ul>
     </div>

@@ -36,13 +36,16 @@ def user_registration():
 
 @app.route('/login', methods=['POST'])
 def user_login():
+    """Logs the user in"""
     email = request.form.get('email')
     password = request.form.get('password')
 
     user = crud.find_email(email)
 
     if user and password==user.password:
+        # this will store the user's information
         session['user_id'] = user.user_id
+        session["user_email"] = user.email
         flash('Log in sucessful!')
     else:
         flash('Login failed, please double check email or password')
@@ -50,17 +53,29 @@ def user_login():
 
     return redirect('/template_files')
 
+@app.route('/logout', methods=["POST"])
+def user_logout():
+    """Logs the user out"""
+    user = session["user_email"]
+
+    if user:
+        session.pop("user_id", None)
+        session.pop("user_email", None)
+        return redirect("/")
+    else:
+        return redirect("/")
+
+
 @app.route('/template_files')
 def files():
-    flash(f'User {session["user_id"]}')
     user_temps = crud.temp_by_user(session["user_id"])
     return render_template('files.html', user_temps=user_temps)
 
 @app.route('/template_creator')
 def template_creator():
-    flash(f'User {session["user_id"]}')
     photocards = crud.all_photocards()
     return render_template('template.html', photocards=photocards)
+
 
 if __name__ == '__main__':
     connect_to_db(app)
