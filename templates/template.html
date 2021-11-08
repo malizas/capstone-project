@@ -3,38 +3,58 @@
 {% block title %} Template Creator{% endblock %}
 
 {% block body %}
-<form action='/template_files'>
-  <button type="submit" id="back_files">Back to Files</button>
-</form>
+<div class="navbar">
+  {% if session.get("user_id") %}
+  <form action='/template_files'>
+    <button type="submit" id="back_files">Back to Files</button>
+  </form>
+  {% else %}
+  <form action='/'>
+    <button type="submit" id="back_home">Back to Homepage</button>
+  </form>
+  {% endif %}
+</div>
+
 <h1> template creator </h1>
 
 <div class="row">
-    <div class="column">
-        <p> template creator will be here </p>
-    </div>
-    <div class="column" style="height:600px;width:700px;border:1px solid gray;overflow:auto;">
-      <div class="navbar">
-        <input type="text" placeholder="search...">
-        <button id="search"> search </button>
+    <div class="column" style="height:600px;width:900px;border:1px solid gray;">
+        <section id="creator-container">
 
-        <select name="groups" id="groups">
-          <option value="bts">bts</option>
-          <option value="stray kids">stray kids</option>
-          <option value="ateez">ateez</option>
-        </select>
-        
+        </section>
+    </div>
+    <div class="column" style="height:600px;width:500px;border:1px solid gray;overflow:auto;">
+      <div class="navbar">
+        <form method="POST">
+          <input type="text" placeholder="search...">
+          <button type="submit" id="search"> search </button>
+        </form>
+        <form method="POST">
+          <select name="groups" id="groups">
+            <option value="all">all</option>
+            <option value="bts">bts</option>
+            <option value="stray kids">stray kids</option>
+            <option value="ateez">ateez</option>
+          </select>
+        </form>
       </div>
 
         <ul>
             {% for card in photocards %}
-            <li><input type="checkbox" id="cb{{ card.photocard_id }}" />
+            <li><input type="checkbox" class="all_photocards" id="cb{{ card.photocard_id }}" />
               <label for="cb{{ card.photocard_id }}"><img src="{{card.pc_img}}" />
-                <br>{{ card.pc_name }}</br>
+                <br id="pc_info">{{ card.pc_name }}</br>
             </label>
             </li>
             {% endfor %}
           </ul>
     </div>
+
+    <form method="POST">
+      <button id="save">Save Template</button>
+    </form>
+    
   </div>
+  <script src="/static/js/templateCreator.js"></script>
 
 {% endblock %}

@@ -3,12 +3,16 @@
 {% block title %} Photocard Template - Home {% endblock %}
 
 {% block body %}
+
+<div class="navbar">
+    <form action="/login">
+        <button type="submit" id="login">Login</button>
+    </form>
+    <form action="/template_creator">
+        <button id="continue as guest">Continue as Guest</button>
+    </form>
+</div>
 <h1>welcome</h1>
 <p>This is a k-pop photocard template creator</p>
-<form action="/login">
-    <button type="submit" id="login">Login</button>
-</form>
-<form action="/template_creator">
-    <button id="continue as guest">Continue as Guest</button>
-</form>
+
 {% endblock %}

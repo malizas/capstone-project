@@ -56,9 +56,8 @@ def user_login():
 @app.route('/logout', methods=["POST"])
 def user_logout():
     """Logs the user out"""
-    user = session["user_email"]
 
-    if user:
+    if session["user_email"]:
         session.pop("user_id", None)
         session.pop("user_email", None)
         return redirect("/")
@@ -76,6 +75,18 @@ def template_creator():
     photocards = crud.all_photocards()
     return render_template('template.html', photocards=photocards)
 
+@app.route('/search', methods=["POST"])
+def search():
+    search_input = request.form.get('search')
+
+    return redirect('/template_creator')
+
+@app.route('/categories', methods=["POST"])
+def change_categories():
+    group = request.form.get('groups')
+    
+
+    return redirect('/template_creator')
 
 if __name__ == '__main__':
     connect_to_db(app)
