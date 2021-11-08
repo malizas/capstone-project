@@ -1,0 +1,80 @@
+[
+    {
+        "pc_name": "hyunjin",
+        "pc_group": "stray kids",
+        "pc_album": "NOEASY",
+        "pc_img": "https://pbs.twimg.com/media/E9sYsgnWQAA6rRe.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYSH verL",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/hobi_hcizuq.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/hobi_cq1z3w.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870450/photocards/BTS/Love%20Yourself%20Her/hobi_lpqtrp.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870463/photocards/BTS/Love%20Yourself%20Her/hobi_e3lvqh.jpg"
+    },
+    {
+        "pc_name": "suga",
+        "pc_group": "bts",
+        "pc_album": "LYSH verL",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/yoongi_dptjwj.jpg"
+    },
+    {
+        "pc_name": "suga",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/yoongi_phjgqq.jpg"
+    },
+    {
+        "pc_name": "suga",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870450/photocards/BTS/Love%20Yourself%20Her/yoongi_cziwrj.jpg"
+    },
+    {
+        "pc_name": "suga",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870463/photocards/BTS/Love%20Yourself%20Her/yoongi_qrlxz4.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "LYSH verL",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/tae_jeo2wt.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870417/photocards/BTS/Love%20Yourself%20Her/tae_hrwfrf.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870449/photocards/BTS/Love%20Yourself%20Her/tae_bohnzb.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870463/photocards/BTS/Love%20Yourself%20Her/tae_pgceyy.jpg"
+    }
+]
