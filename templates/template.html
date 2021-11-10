@@ -23,48 +23,55 @@
   {% endif %}
 </div>
 
+
 <h1> template creator </h1>
+<div class="column" id="creator" style="height:700px;width:900px;border:1px solid gray;">
+</div>
 
-<div class="row">
-    <div class="column" style="height:600px;width:900px;border:1px solid gray;">
-        <section id="creator-container">
-
-        </section>
-    </div>
-    <div class="column" style="height:600px;width:500px;border:1px solid gray;overflow:auto;">
-      <div class="navbar">
-        <form method="POST">
-          <input type="text" placeholder="search...">
-          <button type="submit" id="search"> search </button>
-        </form>
-        <form method="POST">
-          <select name="groups" id="groups">
-            <option value="all">all</option>
-            <option value="bts">bts</option>
-            <option value="stray kids">stray kids</option>
-            <option value="ateez">ateez</option>
-          </select>
-        </form>
-      </div>
-
-      <div id="all_photocards">
-        <ul>
-            {% for card in photocards %}
-            <li>
-              <input type="checkbox" id="cb{{ card.photocard_id }}" value="{{card.pc_img}}" />
-              <label for="cb{{ card.photocard_id }}"><img src="{{card.pc_img}}" />
-              </label>
-            </li>
-            {% endfor %}
-          </ul>
-      </div>
-    </div>
-
+<div class="column" style="height:600px;width:500px;border:1px solid gray;overflow:auto;">
+  <div class="navbar">
     <form method="POST">
-      <button id="save">Save Template</button>
+      <input type="text" placeholder="search...">
+      <button type="submit" id="search"> search </button>
     </form>
-    
+    <form method="POST">
+      <select name="groups" id="groups">
+        <option value="all">all</option>
+        <option value="bts">bts</option>
+        <option value="stray kids">stray kids</option>
+        <option value="ateez">ateez</option>
+      </select>
+    </form>
   </div>
-  <script src="/static/js/templateCreator.js"></script>
 
+  <div id="all_photocards">
+    <ul>
+        {% for card in photocards %}
+        <li>
+          <input type="checkbox" id="cb{{ card.photocard_id }}" value="{{card.pc_img}}" />
+          <label for="cb{{ card.photocard_id }}"> <img src="{{card.pc_img}}" /> </label>
+        </li>
+        {% endfor %}
+      </ul>
+  </div>
+</div>
+
+<button id="save">Download Template</button>
+
+<script src="/static/js/templateCreator.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+  integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"></script>
+  
+<script>
+  $('#save').on('click', function() {
+    domtoimage.toBlob(document.getElementById('creator'))
+    .then(function(blob) {
+        window.saveAs(blob, "output.png")
+    });
+})
+</script>
 {% endblock %}

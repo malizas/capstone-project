@@ -3,6 +3,10 @@
     width: 50%;
   }
 
+#creator {
+  background-color: rebeccapurple;
+}
+
 .navbar {
   overflow: hidden;
   background-color: #e9e9e9;
