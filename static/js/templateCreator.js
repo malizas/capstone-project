@@ -12,6 +12,7 @@ const removePCFromContainer = (data) => {
 }
 
 // takes whatever the pc the user picks from the list of pcs given (right side of column)
+// this is an event handler
 $('input[type="checkbox"]').on('click', function() {
     if (this.checked) {
         addPCToContainer($(this).val());

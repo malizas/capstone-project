@@ -26,8 +26,8 @@
 
 <h1> template creator </h1>
 <div class="column" id="creator" style="height:700px;width:900px;border:1px solid gray;">
-</div>
 
+</div>
 <div class="column" style="height:600px;width:500px;border:1px solid gray;overflow:auto;">
   <div class="navbar">
     <form method="POST">
@@ -59,19 +59,12 @@
 <button id="save">Download Template</button>
 
 <script src="/static/js/templateCreator.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
 <script 
   src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
   integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
   crossorigin="anonymous"
   referrerpolicy="no-referrer"></script>
-  
-<script>
-  $('#save').on('click', function() {
-    domtoimage.toBlob(document.getElementById('creator'))
-    .then(function(blob) {
-        window.saveAs(blob, "output.png")
-    });
-})
-</script>
+<script type="module" src="/static/js/dom-to-image.js"></script>
+
 {% endblock %}
