@@ -1,9 +1,21 @@
 [
     {
-        "pc_name": "hyunjin",
-        "pc_group": "stray kids",
-        "pc_album": "NOEASY",
-        "pc_img": "https://pbs.twimg.com/media/E9sYsgnWQAA6rRe.jpg"
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "LYSH verL",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869728/photocards/BTS/Love%20Yourself%20Her/rm_ymhjks.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "LYSH verL",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/jin_onxuvw.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "LYSH verL",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/yoongi_dptjwj.jpg"
     },
     {
         "pc_name": "j-hope",
@@ -12,46 +24,10 @@
         "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/hobi_hcizuq.jpg"
     },
     {
-        "pc_name": "j-hope",
-        "pc_group": "bts",
-        "pc_album": "LYSH verO",
-        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/hobi_cq1z3w.jpg"
-    },
-    {
-        "pc_name": "j-hope",
-        "pc_group": "bts",
-        "pc_album": "LYSH verV",
-        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870450/photocards/BTS/Love%20Yourself%20Her/hobi_lpqtrp.jpg"
-    },
-    {
-        "pc_name": "j-hope",
-        "pc_group": "bts",
-        "pc_album": "LYSH verE",
-        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870463/photocards/BTS/Love%20Yourself%20Her/hobi_e3lvqh.jpg"
-    },
-    {
-        "pc_name": "suga",
+        "pc_name": "Jimin",
         "pc_group": "bts",
         "pc_album": "LYSH verL",
-        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/yoongi_dptjwj.jpg"
-    },
-    {
-        "pc_name": "suga",
-        "pc_group": "bts",
-        "pc_album": "LYSH verO",
-        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/yoongi_phjgqq.jpg"
-    },
-    {
-        "pc_name": "suga",
-        "pc_group": "bts",
-        "pc_album": "LYSH verV",
-        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870450/photocards/BTS/Love%20Yourself%20Her/yoongi_cziwrj.jpg"
-    },
-    {
-        "pc_name": "suga",
-        "pc_group": "bts",
-        "pc_album": "LYSH verE",
-        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870463/photocards/BTS/Love%20Yourself%20Her/yoongi_qrlxz4.jpg"
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/jimin_owjf1x.jpg"
     },
     {
         "pc_name": "V",
@@ -60,10 +36,82 @@
         "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/tae_jeo2wt.jpg"
     },
     {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "LYSH verL",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869727/photocards/BTS/Love%20Yourself%20Her/jk_cul1gx.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/rm_fueahq.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/jin_u0k5re.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/yoongi_phjgqq.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/hobi_cq1z3w.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870415/photocards/BTS/Love%20Yourself%20Her/jimin_fpl8or.jpg"
+    },
+    {
         "pc_name": "V",
         "pc_group": "bts",
         "pc_album": "LYSH verO",
         "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870417/photocards/BTS/Love%20Yourself%20Her/tae_hrwfrf.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "LYSH verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870416/photocards/BTS/Love%20Yourself%20Her/jk_tilzw7.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870449/photocards/BTS/Love%20Yourself%20Her/rm_ravnsh.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870449/photocards/BTS/Love%20Yourself%20Her/jin_y0tqtw.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870450/photocards/BTS/Love%20Yourself%20Her/yoongi_cziwrj.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870450/photocards/BTS/Love%20Yourself%20Her/hobi_lpqtrp.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870449/photocards/BTS/Love%20Yourself%20Her/jimin_qfigsm.jpg"
     },
     {
         "pc_name": "V",
@@ -72,9 +120,219 @@
         "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870449/photocards/BTS/Love%20Yourself%20Her/tae_bohnzb.jpg"
     },
     {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "LYSH verV",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870449/photocards/BTS/Love%20Yourself%20Her/jk_kiayhn.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870462/photocards/BTS/Love%20Yourself%20Her/rm_ejunou.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870464/photocards/BTS/Love%20Yourself%20Her/jin_wxd1w0.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870463/photocards/BTS/Love%20Yourself%20Her/yoongi_qrlxz4.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870463/photocards/BTS/Love%20Yourself%20Her/hobi_e3lvqh.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870462/photocards/BTS/Love%20Yourself%20Her/jimin_eij6i6.jpg"
+    },
+    {
         "pc_name": "V",
         "pc_group": "bts",
         "pc_album": "LYSH verE",
         "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870463/photocards/BTS/Love%20Yourself%20Her/tae_pgceyy.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "LYSH verE",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635870462/photocards/BTS/Love%20Yourself%20Her/jk_e5ri8f.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "LYST verY",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165106/photocards/BTS/Love%20Yourself%20Tear/rm_plqewq.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "LYST verY",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165105/photocards/BTS/Love%20Yourself%20Tear/jin_acalke.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "LYST verY",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165106/photocards/BTS/Love%20Yourself%20Tear/suga_hig4kv.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYST verY",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165105/photocards/BTS/Love%20Yourself%20Tear/jhope_dwporq.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "LYST verY",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165105/photocards/BTS/Love%20Yourself%20Tear/jimin_j41wvc.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "LYST verY",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165106/photocards/BTS/Love%20Yourself%20Tear/tae_k1zjhi.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "LYST verY",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165105/photocards/BTS/Love%20Yourself%20Tear/jungkook_h4hhru.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "LYST verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165163/photocards/BTS/Love%20Yourself%20Tear/rm_pmajp8.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "LYST verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165162/photocards/BTS/Love%20Yourself%20Tear/jin_imwnhb.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "LYST verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165162/photocards/BTS/Love%20Yourself%20Tear/suga_ottvr1.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYST verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165162/photocards/BTS/Love%20Yourself%20Tear/jhope_s9hbql.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "LYST verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165162/photocards/BTS/Love%20Yourself%20Tear/jimin_gzkm9z.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "LYST verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165163/photocards/BTS/Love%20Yourself%20Tear/tae_b3zrqs.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "LYST verO",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165162/photocards/BTS/Love%20Yourself%20Tear/jungkook_ywwb6a.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "LYST verU",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165202/photocards/BTS/Love%20Yourself%20Tear/rm_prdmoo.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "LYST verU",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165202/photocards/BTS/Love%20Yourself%20Tear/jin_rgwz4w.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "LYST verU",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165201/photocards/BTS/Love%20Yourself%20Tear/suga_rfmzr9.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYST verU",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165200/photocards/BTS/Love%20Yourself%20Tear/jhope_pdzp7k.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "LYST verU",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165201/photocards/BTS/Love%20Yourself%20Tear/jimin_epkmhn.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "LYST verU",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165201/photocards/BTS/Love%20Yourself%20Tear/tae_xjtt5d.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "LYST verU",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1636165202/photocards/BTS/Love%20Yourself%20Tear/jungkook_dn6b4n.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "LYST verR",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1636165232/photocards/BTS/Love%20Yourself%20Tear/rm_sk4ez0.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "LYST verR",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1636165233/photocards/BTS/Love%20Yourself%20Tear/jin_emykkd.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "LYST verR",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1636165233/photocards/BTS/Love%20Yourself%20Tear/suga_ttwxmc.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "LYST verR",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1636165233/photocards/BTS/Love%20Yourself%20Tear/jhope_p7uuxk.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "LYST verR",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1636165232/photocards/BTS/Love%20Yourself%20Tear/jimin_hlmrnw.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "LYST verR",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1636165233/photocards/BTS/Love%20Yourself%20Tear/tae_b81svp.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "LYST verR",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1636165232/photocards/BTS/Love%20Yourself%20Tear/jungkook_nzl56w.jpg"
     }
 ]

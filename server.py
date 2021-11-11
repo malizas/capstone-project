@@ -83,8 +83,7 @@ def search():
 
 @app.route('/categories', methods=["POST"])
 def change_categories():
-    group = request.form.get('groups')
-    
+    group = request.form.get('groups')    
 
     return redirect('/template_creator')
 
