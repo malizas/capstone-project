@@ -73,7 +73,7 @@ def files():
 @app.route('/template_creator')
 def template_creator():
     photocards = crud.all_photocards()
-    return render_template('template.html', photocards=photocards)
+    return render_template('template-creator.html', photocards=photocards)
 
 @app.route('/search', methods=["POST"])
 def search():
@@ -83,7 +83,7 @@ def search():
 
 @app.route('/categories', methods=["POST"])
 def change_categories():
-    group = request.form.get('groups')    
+    group = request.form.get('groups')
 
     return redirect('/template_creator')
 

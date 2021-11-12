@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %} template creator {% endblock %}
+
+{% block head %}
+<script
+  src="http://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous">
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="navbar">
+    {% if session.get("user_id") %}
+    <form action='/template_files'>
+      <button type="submit" id="back_files">Back to Files</button>
+    </form>
+    {% else %}
+    <form action='/'>
+      <button type="submit" id="back_home">Back to Homepage</button>
+    </form>
+    {% endif %}
+  </div>
+
+<h2> template creator </h2>
+  <div class="container">
+    <div class="row">
+        <div class="col-6" id="creator" style="border:1px solid gray;">
+            <h2 id="title" style="padding:10px"> my template creator</h2>
+            <div id="picked"></div>
+        </div>
+
+        <div class="col-1" id="divider"></div>
+
+        <div class="col-5" id="pick_pcs" style="border:1px solid gray;padding-right:0px;padding-left:0px;overflow:auto;">
+          <section id="photocards">
+            <div class="navbar">
+              <form method="POST">
+                <input type="text" placeholder="search...">
+                <button type="submit" id="search"> search </button>
+              </form>
+              <form method="POST">
+                <select name="groups" id="groups">
+                  <option value="all">all</option>
+                  <option value="bts">bts</option>
+                  <option value="stray kids">stray kids</option>
+                  <option value="ateez">ateez</option>
+                </select>
+              </form>
+            </div>
+
+            <div id="all_photocards">
+              <ul>
+                  {% for card in photocards %}
+                  <li>
+                    <input type="checkbox" id="cb{{ card.photocard_id }}" value="{{card.pc_img}}" />
+                    <label for="cb{{ card.photocard_id }}"> <img src="{{card.pc_img}}" /> </label>
+                  </li>
+                  {% endfor %}
+                </ul>
+            </div>
+          </section>
+          <section id="customize" style="display: none;">
+            <ul>
+              <li>
+                <label>Change Title:</label>
+                <input type="text" id="title_text" placeholder="my template creator">
+              </li>
+              <li>
+                <label>Change Title Size:</label>
+                <input type="range" min="1" max="100" value="20" id="title_size">
+                <span id="value"></span>
+              </li>
+              <li>
+                <label>Change Title Alignment:</label>
+                <button id="left-align">Left</button>
+                <button id="center-align">Center</button>
+                <button id="right-align">Right</button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <label>Background Color:</label>
+                <input type="color" id="bg-color" name="background">
+              </li>
+              <li>
+                <label>Font Color:</label>
+                <input type="color" id="font-color" name="font">
+              </li>
+            </ul>
+          </section>
+
+          <div id="buttons">
+            <button id="save">Download Template</button>
+            <button id="to_customize">To Customization</button>
+            <button id="back" style="display: none;">Back</button>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+<script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+  integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer">
+</script>
+<script src="/static/js/templateCreator.js"></script>
+<script src="/static/js/userCustomization.js"></script>
+<script type="module" src="/static/js/domToImage.js"></script>
+{% endblock %}

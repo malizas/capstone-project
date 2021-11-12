@@ -3,8 +3,8 @@
 // whatever pc the user chooses will show up in the creator-container (left side of column)
 // need to somehow implement an if statement for whenever the user picks a pc
 const addPCToContainer = (data) => {
-    $('#creator').append(
-        `<img src="${data}" style="height:140px;width=auto" />`)
+    $('#picked').append(
+        `<img src="${data}" style="height:140px;width:auto;" />`)
 }
 
 // removes the pc that is unchecked
@@ -20,4 +20,20 @@ $('input[type="checkbox"]').on('click', function() {
     } else {
         removePCFromContainer($(this).val());
     };
+})
+
+// when clicked, will bring to_customize
+$('#to_customize').on('click', function() {
+    $('#photocards').hide();
+    $('#customize').show();
+    $('#to_customize').hide();
+    $('#back').show();
+})
+
+// when clicked, will go back to all the photocards
+$('#back').on('click', function() {
+    $('#photocards').show();
+    $('#customize').hide();
+    $('#to_customize').show();
+    $('#back').hide();
 })
