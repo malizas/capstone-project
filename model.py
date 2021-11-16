@@ -74,6 +74,7 @@ class Photocard(db.Model):
     pc_name = db.Column(db.String(30))
     pc_group = db.Column(db.String(30))
     pc_album = db.Column(db.String(50))
+    pc_version = db.Column(db.String(20))
     pc_img = db.Column(db.String)
 
     #pc_picked = list of PC_Picked objects

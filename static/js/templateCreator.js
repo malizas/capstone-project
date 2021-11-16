@@ -1,7 +1,6 @@
 'use strict';
 
 // whatever pc the user chooses will show up in the creator-container (left side of column)
-// need to somehow implement an if statement for whenever the user picks a pc
 const addPCToContainer = (data) => {
     $('#picked').append(
         `<img src="${data}" style="height:140px;width:auto;" />`)
@@ -9,11 +8,11 @@ const addPCToContainer = (data) => {
 
 // removes the pc that is unchecked
 const removePCFromContainer = (data) => {
-    $(`#creator img[src="${data}"]`).remove()
+    $(`#picked img[src="${data}"]`).remove()
 }
 
 // takes whatever the pc the user picks from the list of pcs given (right side of column)
-// this is an event handler
+// notes to self: this is what you call an event handler
 $('input[type="checkbox"]').on('click', function() {
     if (this.checked) {
         addPCToContainer($(this).val());

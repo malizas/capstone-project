@@ -16,23 +16,37 @@ slider.on('input', function() {
 
 //change title alignment
 $('#left-align').on('click', function() {
-  $('#title').css('text-align', 'left')
+  $('#title').css('text-align', 'left');
 })
 
 $('#center-align').on('click', function() {
-  $('#title').css('text-align', 'center')
+  $('#title').css('text-align', 'center');
 })
 
 $('#right-align').on('click', function() {
-  $('#title').css('text-align', 'right')
+  $('#title').css('text-align', 'right');
 })
 
 //change background color
 $('#bg-color').change(function() {
-  $('#creator').css('background', $(this).val())
+  $('#creator').css('background', $(this).val());
 })
 
 //change font color
 $('#font-color').change(function(){
-  $('#title').css('color', $(this).val())
+  $('#title').css('color', $(this).val());
+})
+
+//change fonts
+$('#font-family').change(function () {
+  $('#title').css("font-family", $(this).val());
+});
+
+//change image size
+const img_slider = $('#pc_size');
+$('#pc_value').html(img_slider.val());
+
+img_slider.on('input', function() {
+  $('#pc_value').html(img_slider.val());
+  $('#picked img').css('height', img_slider.val() + 'px');
 })

@@ -16,9 +16,9 @@ with open('data/photocards.json') as f:
 
 photocards_db = []
 for photocard in pc_data:
-    pc_name, pc_group, pc_album, pc_img = photocard["pc_name"], photocard["pc_group"], photocard["pc_album"], photocard["pc_img"]
+    pc_name, pc_group, pc_album, pc_version, pc_img = photocard["pc_name"], photocard["pc_group"], photocard["pc_album"], photocard["pc_version"], photocard["pc_img"]
 
-    photocards_to_add = crud.create_photocard(pc_name, pc_group, pc_album, pc_img)
+    photocards_to_add = crud.create_photocard(pc_name, pc_group, pc_album, pc_version, pc_img)
     photocards_db.append(photocards_to_add)
 
 for n in range(5):

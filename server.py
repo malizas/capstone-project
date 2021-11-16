@@ -75,17 +75,18 @@ def template_creator():
     photocards = crud.all_photocards()
     return render_template('template-creator.html', photocards=photocards)
 
-@app.route('/search', methods=["POST"])
+@app.route('/search', methods=["GET", "POST"])
 def search():
     search_input = request.form.get('search')
+    input = search_input.lower()
+    groups = crud.pc_by_name(input)
 
-    return redirect('/template_creator')
+    # what i want to do: get the search input from the search form
+    # whatever they put in, let's say "bts" then just the bts photocards will show
+    # if they put in a name, like "Jimin" then all the jimin photocards will show
 
-@app.route('/categories', methods=["POST"])
-def change_categories():
-    group = request.form.get('groups')
 
-    return redirect('/template_creator')
+    return redirect('/template_creator', photocards=groups)
 
 if __name__ == '__main__':
     connect_to_db(app)

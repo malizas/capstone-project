@@ -10,14 +10,29 @@
 </div>
 
 <h2> template files </h2>
-<table>
-    {% for temp in user_temps %}
-    <tr>
-        <th> Template {{ temp.template_id }}</th>
-        <td>{{ temp.template_id }}</td>
-    </tr>
-    {% endfor %}
-</table>
+
+<div class="container">
+    <div class="row" style="text-align: center;">
+      <div class="col-2" id="divider"></div>
+  
+      <div class="col-8" style="border:1px solid gray;padding-right:0px;padding-left:0px;">
+        <div class="navbar">
+          <p> Your Templates:</p>
+        </div>
+        <table>
+            {% for temp in user_temps %}
+            <tr>
+                <th> Template {{ temp.template_id }}</th>
+                <td>{{ temp.template_id }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+      </div>
+  
+      <div class="col-2" id="divider"></div>
+    </div>
+  </div>
 
 <form action='/template_creator'>
     <button type="submit" id="to_templates">To Template Creator</button>

@@ -23,9 +23,9 @@ def find_email(email):
     return User.query.filter(User.email == email).first()
 
 
-def create_photocard(pc_name, pc_group, pc_album, pc_img):
+def create_photocard(pc_name, pc_group, pc_album, pc_version, pc_img):
     """Create a new photocard"""
-    photocard = Photocard(pc_name=pc_name, pc_group=pc_group, pc_album=pc_album, pc_img=pc_img)
+    photocard = Photocard(pc_name=pc_name, pc_group=pc_group, pc_album=pc_album, pc_version=pc_version, pc_img=pc_img)
 
     db.session.add(photocard)
     db.session.commit()
