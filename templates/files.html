@@ -19,13 +19,22 @@
         <div class="navbar">
           <p> Your Templates:</p>
         </div>
-        <table>
-            {% for temp in user_temps %}
+        <table class="table table-bordered">
+          <thead>
             <tr>
-                <th> Template {{ temp.template_id }}</th>
-                <td>{{ temp.template_id }}</td>
+              <th scope="col">#</th>
+              <th scope="col">Template</th>
             </tr>
-            {% endfor %}
+          </thead>
+          
+          {% for temp in user_temps %}
+          <tbody>
+            <th scope="row">{{ loop.index }}</th>
+            <td>
+                <a href="/template_creator/{{ temp.template_id }}"> {{ temp.template_id }}</a>
+            </td>
+          </tbody>
+          {% endfor %}
         </table>
 
       </div>

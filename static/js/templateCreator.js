@@ -21,6 +21,14 @@ $('input[type="checkbox"]').on('click', function() {
     };
 })
 
+//search function
+$('#search').keyup(function(){
+    const input = $(this).val().toLowerCase();
+    $('#all_photocards li').filter(function(){
+        $(this).toggle($(this).text().toLowerCase().indexOf(input) > -1);
+    })
+})
+
 // when clicked, will bring to_customize
 $('#to_customize').on('click', function() {
     $('#photocards').hide();

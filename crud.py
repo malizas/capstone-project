@@ -80,8 +80,14 @@ def create_pc_picked(template_id, photocard_id):
     db.session.commit()
 
 def template_by_pc_pick(template_id):
-    """Return the template with each photocards"""
-    return PC_Picked.query.filter(PC_Picked.template_id == template_id).all()
+    """Returns a list using the template_id to get photocard_id on it"""
+    temp_pc = PC_Picked.query.filter(PC_Picked.template_id == template_id).all()
+
+    pcs_in_temp = []
+    for pc in temp_pc:
+        pcs_in_temp.append(pc_by_id(pc.photocard_id))
+
+    return pcs_in_temp
 
 
 if __name__ == "__main__":

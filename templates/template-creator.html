@@ -29,7 +29,13 @@
   <div class="row">
       <div class="col-6" id="creator" style="border:1px solid gray; background-color: white;">
           <h2 id="title" style="padding:10px"> my template creator</h2>
-          <div id="picked"></div>
+          
+          <div id="picked">
+            {% for pc in pc_temps %}
+            <img src="{{pc.pc_img}}" style="height:140px;width:auto;" />
+            {% endfor %}
+          </div>
+
       </div>
 
       <div class="col-1" id="divider"></div>
@@ -37,18 +43,17 @@
       <div class="col-5" id="pick_pcs" style="border:1px solid gray;padding-right:0px;padding-left:0px;overflow:auto;">
         <section id="photocards">
           <div class="navbar">
-            <form method="POST">
-              <input type="text" placeholder="search...">
-              <button type="submit" id="search"> search </button>
-            </form>
+              <input type="text" id="search" placeholder="search...">
           </div>
 
           <div id="all_photocards">
             <ul>
                 {% for card in photocards %}
-                <li>
+                <li style="vertical-align:top;">
                   <input type="checkbox" id="cb{{ card.photocard_id }}" value="{{card.pc_img}}" />
-                  <label for="cb{{ card.photocard_id }}"> <img src="{{card.pc_img}}" /> </label>
+                  <label for="cb{{ card.photocard_id }}"> <img src="{{card.pc_img}}" /></label>
+                  <div style="font-size: 8px; width:91px"> {{ card.pc_album }}</div>
+                  <div style="font-size: 8px;"> {{ card.pc_version }} - {{ card.pc_name }} </div>
                 </li>
                 {% endfor %}
               </ul>
@@ -108,10 +113,21 @@
               <span id="pc_value"></span>
             </li>
           </ul>
+
+          <ul>
+            <li>
+              <label> Add your own Photocard:</label>
+              <form action="/post-photocards" method="post" enctype="multipart/form-data">
+                <input type="file" name="user_pc">
+                <input type="submit">
+              </form>
+            </li>
+          </ul>
         </section>
 
         <div id="buttons">
           <button id="save">Download Template</button>
+          <button id="file">Save Template</button>
           <button id="to_customize">To Customization</button>
           <button id="back" style="display: none;">Back</button>
         </div>
