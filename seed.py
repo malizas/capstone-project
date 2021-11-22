@@ -5,8 +5,8 @@ import json
 from random import choice, randint
 import crud, model, server
 
-os.system('dropdb ratings')
-os.system('createdb ratings')
+os.system('dropdb photocards')
+os.system('createdb photocards')
 
 model.connect_to_db(server.app)
 model.db.create_all()
@@ -21,7 +21,7 @@ for photocard in pc_data:
     photocards_to_add = crud.create_photocard(pc_name, pc_group, pc_album, pc_version, pc_img)
     photocards_db.append(photocards_to_add)
 
-for n in range(5):
+for n in range(3):
     email = f'user{n}@test.com'
     password = 'testing'
 
@@ -36,7 +36,7 @@ for n in range(5):
 
         crud.create_template(choice(font_family), choice(font_color), choice(bg_color), user_temp)
 
-    for number in range(1,3):
+    for number in range(5):
         #what i want to do: get a random number from the length of the templates and photocards
         #taking that random number, and put it into create_pc_picked
         all_temps = crud.all_templates()

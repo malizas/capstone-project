@@ -22,6 +22,12 @@
       <button type="submit" id="back_home">Back to Homepage</button>
     </form>
     {% endif %}
+
+    {% if session.get("user_id") %}
+    <form action='/save_template' id="save_template" method="POST">
+      <button type="submit" id="save_file">Save Template</button>
+    </form>
+    {% endif %}
   </div>
 
 <h2> template creator </h2>
@@ -38,7 +44,9 @@
 
       </div>
 
-      <div class="col-1" id="divider"></div>
+      <div class="col-1" id="divider">
+        <button id="trash_all">Clear All</button>
+      </div>
 
       <div class="col-5" id="pick_pcs" style="border:1px solid gray;padding-right:0px;padding-left:0px;overflow:auto;">
         <section id="photocards">
@@ -127,7 +135,6 @@
 
         <div id="buttons">
           <button id="save">Download Template</button>
-          <button id="file">Save Template</button>
           <button id="to_customize">To Customization</button>
           <button id="back" style="display: none;">Back</button>
         </div>

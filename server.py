@@ -70,6 +70,12 @@ def files():
     user_temps = crud.temp_by_user(session["user_id"])
     return render_template('files.html', user_temps=user_temps)
 
+@app.route('/create_template', methods=["POST"])
+def create_template():
+    crud.create_template("arial", "black", "white", crud.find_user(session["user_id"]))
+
+    return redirect('/template_creator')
+
 @app.route('/template_creator')
 def template_creator():
     photocards = crud.all_photocards()
@@ -79,10 +85,20 @@ def template_creator():
 def user_template(template_id):
     pc_temps = crud.template_by_pc_pick(template_id)
     photocards = crud.all_photocards()
+
+    flash(f'user id is #{session["user_id"]}')
+    flash(f' this is template #{template_id}')
+    for pc in pc_temps:
+        session["photocard_id"]=pc.photocard_id
+        
+        flash(f'this template is using photocard id {session["photocard_id"]}')
     return render_template('template-creator.html', photocards=photocards, pc_temps=pc_temps)
 
 @app.route('/save_template', methods=["POST"])
-def save_template():
+def save_template(template_id):
+    pc_temps = crud.template_by_pc_pick(template_id)
+    for pc in pc_temps:
+        session["photocard_id"]=pc.photocard_id
 
     return redirect('/template-creator')
 

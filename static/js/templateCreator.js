@@ -11,6 +11,12 @@ const removePCFromContainer = (data) => {
     $(`#picked img[src="${data}"]`).remove()
 }
 
+// clears all pcs in the creator-container
+$('#trash_all').on('click', function() {
+    $('#picked').empty();
+    $('input[type="checkbox"]').prop('checked', false);
+})
+
 // takes whatever the pc the user picks from the list of pcs given (right side of column)
 // notes to self: this is what you call an event handler
 $('input[type="checkbox"]').on('click', function() {

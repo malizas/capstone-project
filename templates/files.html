@@ -7,6 +7,10 @@
     <form action="/logout" method="POST">
         <button id="logout">Log Out</button>
     </form>
+
+    <form action='/create_template' id="new_template" method="POST">
+      <button type="submit" id="to_templates">Create a new Template</button>
+  </form>
 </div>
 
 <h2> template files </h2>
@@ -42,8 +46,4 @@
       <div class="col-2" id="divider"></div>
     </div>
   </div>
-
-<form action='/template_creator'>
-    <button type="submit" id="to_templates">To Template Creator</button>
-</form>
 {% endblock %}
