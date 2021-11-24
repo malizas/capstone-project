@@ -3,11 +3,6 @@
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
-# association_table = db.Table('pc_picked',
-#                     db.Column('template_id', db.Integer, db.ForeignKey('templates.template_id')),
-#                     db.Column('photocard_id', db.Integer, db.ForeignKey('photocards.photocard_id'))
-#                     )
-
 class User(db.Model):
     """User Information"""
 
@@ -38,8 +33,6 @@ class Template(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
 
     user = db.relationship("User", backref="templates")
-    #photocards = db.relationship("Photocard", secondary="pc_picked", backref="templates")
-    #photocards = db.relationship("Photocard", secondary=association_table)
 
     #pc_picked = list of PC_Picked objects
 

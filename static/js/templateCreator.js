@@ -34,23 +34,17 @@ $('#search').keyup(function(){
         $(this).toggle($(this).text().toLowerCase().indexOf(input) > -1);
     })
 })
-// save feature
-$('#save_template').on('click', function(evt) {
-    // select all the checked checboxes on the right side of the screen,
-    // remember, we want the ids of the checked pcs not the value!
-    // once we have that array, we make an ajax post request to send the array to the server side
-    // the array should have the ids that are selected (aka the pcs in the template);
-    // it should take the pcs in the array and do a comparison of the pc_picked table
-    // conditionals: if a pc in the array is already in the pc_picked table, we don't do anything
-    // if it's new and not in the pc_picked table, we add it
-    // if it's not in the array and in the pc_picked table, we delete it
 
+// save feature; takes the pcs that are checked and puts it into an array
+$('#save_template').on('click', function(evt) {
     evt.preventDefault();
     const searchId = $('input[type="checkbox"]:checked').map(function() {
         return $(this).attr('id')
     }).get();
 
-    const pc_ids = searchId.map(s => s.slice(2));
+    const pc_ids = searchId.map(s => s.slice(2))
+    console.log(typeof pc_ids)
+    console.log(pc_ids)
 
     $.post('/save_template', pc_ids, res => {
         alert(res);

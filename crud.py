@@ -58,6 +58,14 @@ def create_template(font_family, font_color, bg_color, user):
     db.session.add(template)
     db.session.commit()
 
+def delete_template(template_id):
+    """Deletes a template"""
+    template_to_delete = Template.query.filter(Template.template_id == template_id).first()
+    
+    db.session.delete(template_to_delete)
+    db.session.commit()
+
+
 def all_templates():
     return Template.query.all()
 

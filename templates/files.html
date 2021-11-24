@@ -28,6 +28,7 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Template</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           
@@ -36,6 +37,11 @@
             <th scope="row">{{ loop.index }}</th>
             <td>
                 <a href="/template_creator/{{ temp.template_id }}"> {{ temp.template_id }}</a>
+            </td>
+            <td class="col-2">
+              <form action="/delete_file/{{ temp.template_id }}" method="POST">
+                <button class="btn btn-danger" id="temp.template_id" onclick="return confirm('Do you want to permanently delete file {{ temp.template_id }}?');">Delete {{ temp.template_id }}</button>
+              </form>
             </td>
           </tbody>
           {% endfor %}
