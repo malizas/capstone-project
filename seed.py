@@ -36,13 +36,10 @@ for n in range(3):
 
         crud.create_template(choice(font_family), choice(font_color), choice(bg_color), user_temp)
 
-    for number in range(5):
-        #what i want to do: get a random number from the length of the templates and photocards
-        #taking that random number, and put it into create_pc_picked
+    for number in range(10):
         all_temps = crud.all_templates()
         random_temp = choice(all_temps)
         all_pcs = crud.all_photocards()
         random_pc = choice(all_pcs)
-
 
         crud.create_pc_picked(random_temp.template_id, random_pc.photocard_id)

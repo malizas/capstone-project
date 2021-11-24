@@ -40,7 +40,7 @@
           
           <div id="picked">
             {% for pc in pc_temps %}
-            <img src="{{pc.pc_img}}" style="height:140px;width:auto;" />
+            <img src="{{pc.pc_img}}" id="cb{{pc.photocard_id}}" style="height:140px;width:auto;" />
             {% endfor %}
           </div>
 
@@ -122,16 +122,6 @@
               <label>Change Photocard Size:</label>
               <input type="range" min="100" max="300" value="140" id="pc_size">
               <span id="pc_value"></span>
-            </li>
-          </ul>
-
-          <ul>
-            <li>
-              <label> Add your own Photocard:</label>
-              <form action="/post-photocards" method="post" enctype="multipart/form-data">
-                <input type="file" name="user_pc">
-                <input type="submit">
-              </form>
             </li>
           </ul>
         </section>

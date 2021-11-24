@@ -2,7 +2,8 @@
 
 from flask import (Flask, render_template, request, flash, session,
                 redirect, Markup, jsonify)
-from model import connect_to_db
+from model import connect_to_db,db
+import requests
 import crud
 # import cloudinary.uploader
 import os
@@ -82,7 +83,6 @@ def delete_template(template_id):
 
     return redirect('/template_files')
 
-
 @app.route('/template_creator/<template_id>')
 def user_template(template_id):
     pc_temps = crud.template_by_pc_pick(template_id)
@@ -90,30 +90,33 @@ def user_template(template_id):
     session["template_id"] = template_id
 
     flash(f'user id is #{session["user_id"]}')
-    flash(f' this is template #{session["template_id"]}')
+    flash(f'this is template #{session["template_id"]}')
+
     for pc in pc_temps:
-        session["photocard_id"]=pc.photocard_id
-        flash(f'this template is using photocard id {session["photocard_id"]}')
+        flash(f'this is using photocards #{pc.photocard_id}')
 
     return render_template('template-creator.html', photocards=photocards, pc_temps=pc_temps)
 
 @app.route('/save_template', methods=["POST"])
 def save_template():
-    pcs_in_template = crud.template_by_pc_pick(session["template_id"])
-    pc_id_list = []
-    for pc in pcs_in_template:
-        pc_id_list.append(pc.photocard_id)
+    template_and_pcs = crud.template_by_pc_pick(session["template_id"])
+    pcs_in_template = []
+    for pc in template_and_pcs:
+        pcs_in_template.append(pc.photocard_id)
 
-    ids_from_template = request.args.getlist("pc_ids")
-    # cause of problem: my ajax request!! therefore my for loop doesn't work
+    ids_from_template = request.form.getlist("pc_key[]")
+    results = list(map(int, ids_from_template))
+    print("PCS IN TEMPLATE HERE", pcs_in_template)
+    print(f' TEMPLATE ID HERE {session["template_id"]}')
+    print(results)
 
-    for pc_id in ids_from_template:
-        if pc_id not in pc_id_list: #if the photocard is NOT in the template
+    for pc_id in results:
+        if pc_id not in pcs_in_template: #if the photocard is NOT in the template
             crud.create_pc_picked(session["template_id"], pc_id)
         else: #if pc NOT in the array/list but IS in the pc_picked table
             crud.delete_pc_in_temp(session["template_id"], pc_id)
 
-    return f'{ids_from_template}'
+    return 'Your progress has been saved!'
 
 @app.route('/template_creator')
 def template_creator():

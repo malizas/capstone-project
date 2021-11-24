@@ -59,9 +59,13 @@ def create_template(font_family, font_color, bg_color, user):
     db.session.commit()
 
 def delete_template(template_id):
-    """Deletes a template"""
+    """Deletes a template, will delete row from PC_Picked table, and from Template table"""
     template_to_delete = Template.query.filter(Template.template_id == template_id).first()
-    
+    template_pc_pick = PC_Picked.query.filter(PC_Picked.template_id == template_id).all()
+
+    for template in template_pc_pick:
+        db.session.delete(template)
+
     db.session.delete(template_to_delete)
     db.session.commit()
 
@@ -99,15 +103,9 @@ def template_by_pc_pick(template_id):
 
 def delete_pc_in_temp(template_id, pc_id):
     """If a photocard was taken out of the template, this updates the pc_pick table"""
-    pcs_in_template = template_by_pc_pick(template_id)
-
-    pc_id_list = []
-    for pc in pcs_in_template:
-        pc_id_list.append(pc.photocard_id)
-
-    if pc_id in pc_id_list:
-        PC_Picked.query.filter(PC_Picked.photocard_id == pc_id).delete()
-        db.session.commit()
+    pc_pick = PC_Picked.query.filter((PC_Picked.photocard_id == pc_id) & (PC_Picked.template_id == template_id)).first()
+    db.session.delete(pc_pick)
+    db.session.commit()
 
 
 if __name__ == "__main__":

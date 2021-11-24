@@ -3,7 +3,7 @@
 // whatever pc the user chooses will show up in the creator-container (left side of column)
 const addPCToContainer = (data) => {
     $('#picked').append(
-        `<img src="${data}" id="${data} "style="height:140px;width:auto;" />`)
+        `<img src="${data}" style="height:140px;width:auto;" />`)
 }
 
 // removes the pc that is unchecked
@@ -43,10 +43,12 @@ $('#save_template').on('click', function(evt) {
     }).get();
 
     const pc_ids = searchId.map(s => s.slice(2))
-    console.log(typeof pc_ids)
-    console.log(pc_ids)
 
-    $.post('/save_template', pc_ids, res => {
+    const form_data = {
+        pc_key: pc_ids
+    }
+
+    $.post('/save_template', form_data, res => {
         alert(res);
     });
 })
