@@ -85,22 +85,31 @@ def template_creator():
 def user_template(template_id):
     pc_temps = crud.template_by_pc_pick(template_id)
     photocards = crud.all_photocards()
+    session["template_id"] = template_id
 
     flash(f'user id is #{session["user_id"]}')
-    flash(f' this is template #{template_id}')
+    flash(f' this is template #{session["template_id"]}')
     for pc in pc_temps:
         session["photocard_id"]=pc.photocard_id
-        
         flash(f'this template is using photocard id {session["photocard_id"]}')
+
     return render_template('template-creator.html', photocards=photocards, pc_temps=pc_temps)
 
 @app.route('/save_template', methods=["POST"])
-def save_template(template_id):
-    pc_temps = crud.template_by_pc_pick(template_id)
-    for pc in pc_temps:
-        session["photocard_id"]=pc.photocard_id
+def save_template():
+# if a pc in the array is already in the pc_picked table, we don't do anything
+# if it's new and not in the pc_picked table, we add it
+# if it's not in the array and in the pc_picked table, we delete it
 
-    return redirect('/template-creator')
+    ids_from_template = request.args.get('ids')
+    for id in ids_from_template:
+        if id not in crud.template_by_pc_pick(session["template_id"]): # if the pc is NOT in the template
+            crud.create_pc_picked(session["template_id"], id)
+        #if pc NOT in array but IS in pc_picked table
+        else:
+            crud.delete_pc_in_temp(session["template_id"], id)
+
+    return "Your progress has been saved!"
 
 if __name__ == '__main__':
     connect_to_db(app)

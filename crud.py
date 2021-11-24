@@ -80,7 +80,7 @@ def create_pc_picked(template_id, photocard_id):
     db.session.commit()
 
 def template_by_pc_pick(template_id):
-    """Returns a list using the template_id to get photocard_id on it"""
+    """Returns a list of all photocards in the template using the template_id"""
     temp_pc = PC_Picked.query.filter(PC_Picked.template_id == template_id).all()
 
     pcs_in_temp = []
@@ -88,6 +88,18 @@ def template_by_pc_pick(template_id):
         pcs_in_temp.append(pc_by_id(pc.photocard_id))
 
     return pcs_in_temp
+
+def delete_pc_in_temp(template_id, pc_id):
+    """If a photocard was taken out of the template, this updates the pc_pick table"""
+    pcs_in_template = template_by_pc_pick(template_id)
+
+    pc_id_list = []
+    for pc in pcs_in_template:
+        pc_id_list.append(pc.photocard_id)
+
+    if pc_id in pc_id_list:
+        PC_Picked.query.filter(PC_Picked.photocard_id == pc_id).delete()
+        db.session.commit()
 
 
 if __name__ == "__main__":
