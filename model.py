@@ -1,6 +1,8 @@
 """Models for Photocard Template Creator"""
 
 from flask_sqlalchemy import SQLAlchemy
+from crud import all_photocards
+from random import choice
 db = SQLAlchemy()
 
 class User(db.Model):
@@ -86,6 +88,27 @@ def connect_to_db(app):
     db.app = app
     db.init_app(app)
     print("Conntect to db!")
+
+def example_data():
+    """Create sample data"""
+
+    # empty existing data in case run more than once
+    User.query.delete()
+    Template.query.delete()
+    PC_Picked.query.delete()
+
+    # add sample users, templates and pc_picked
+    test_user = User(user_id=1, email="user1@test.com", password="test_password")
+    template_1 = Template(template_id=1, font_family="Arial", font_color="black", bg_color="red", user_id="1")
+
+    for number in range(6):
+        all_pcs = all_photocards()
+        random_pc = choice(all_pcs)
+
+        test_pcs = PC_Picked(pc_picked_id=1, template_id=1, photocard_id=random_pc)
+
+    db.session.add_all([test_user, template_1, test_pcs])
+
 
 if __name__ == "__main__":
     from flask import Flask

@@ -104,6 +104,7 @@ def template_by_pc_pick(template_id):
 def delete_pc_in_temp(template_id, pc_id):
     """If a photocard was taken out of the template, this updates the pc_pick table"""
     pc_pick = PC_Picked.query.filter((PC_Picked.photocard_id == pc_id) & (PC_Picked.template_id == template_id)).first()
+    
     db.session.delete(pc_pick)
     db.session.commit()
 
