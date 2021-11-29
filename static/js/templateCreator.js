@@ -19,7 +19,6 @@ $('#trash_all').on('click', function() {
 })
 
 // takes whatever the pc the user picks from the list of pcs given (right side of column)
-// notes to self: this is what you call an event handler
 $('input[type="checkbox"]').on('click', function() {
     if (this.checked) {
         addPCToContainer($(this).val(), $(this).attr('id'));

@@ -62,6 +62,7 @@ def user_logout():
     else:
         return redirect("/")
 
+# USER FILES -----------------------------
 
 @app.route('/template_files')
 def files():
@@ -79,6 +80,9 @@ def delete_template(template_id):
     crud.delete_template(template_id)
 
     return redirect('/template_files')
+
+
+# USER'S TEMPLATES -----------------------------
 
 @app.route('/template_creator/<template_id>')
 def user_template(template_id):
@@ -107,6 +111,8 @@ def save_template():
             crud.delete_pc_in_temp(session["template_id"], pc_id)
 
     return 'Your progress has been saved!'
+
+# TEMPLATE CREATOR -----------------------------
 
 @app.route('/template_creator')
 def template_creator():
