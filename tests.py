@@ -32,9 +32,8 @@ class FlaskTests(TestCase):
                                 follow_redirects=True)
         self.assertIn(b"Registration complete!, Account has been created", result.data)
 
-
     def login(self):
-        """Test Login"""
+        """Login Test"""
         result = self.client.post('/login',
                                 data={"email":"user1@test.com", "password": "test_password"},
                                 follow_redirects=True)
@@ -43,7 +42,6 @@ class FlaskTests(TestCase):
     def template_creator(self):
         result = self.client.get('/template_creator')
         self.assertIn(b"Template with photocards", result.data)
-
 
     def tearDown(self):
         """Tear Down -- stuff to do after every test"""

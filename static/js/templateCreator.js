@@ -1,9 +1,9 @@
 'use strict';
 
 // whatever pc the user chooses will show up in the creator-container (left side of column)
-const addPCToContainer = (data) => {
+const addPCToContainer = (data,id) => {
     $('#picked').append(
-        `<img src="${data}" style="height:140px;width:auto;" />`)
+        `<img src="${data}" id="${id}" style="height:140px;width:auto;" />`)
 }
 
 // removes the pc that is unchecked
@@ -15,13 +15,14 @@ const removePCFromContainer = (data) => {
 $('#trash_all').on('click', function() {
     $('#picked').empty();
     $('input[type="checkbox"]').prop('checked', false);
+    alert("Are you sure you want to delete your progress?")
 })
 
 // takes whatever the pc the user picks from the list of pcs given (right side of column)
 // notes to self: this is what you call an event handler
 $('input[type="checkbox"]').on('click', function() {
     if (this.checked) {
-        addPCToContainer($(this).val());
+        addPCToContainer($(this).val(), $(this).attr('id'));
     } else {
         removePCFromContainer($(this).val());
     };
@@ -38,12 +39,11 @@ $('#search').keyup(function(){
 // save feature; takes the pcs that are checked and puts it into an array
 $('#save_template').on('click', function(evt) {
     evt.preventDefault();
-    const searchId = $('input[type="checkbox"]:checked').map(function() {
+    const searchId = $('#picked img').map(function() {
         return $(this).attr('id')
     }).get();
 
     const pc_ids = searchId.map(s => s.slice(2))
-
     const form_data = {
         pc_key: pc_ids
     }

@@ -86,12 +86,6 @@ def user_template(template_id):
     photocards = crud.all_photocards()
     session["template_id"] = template_id
 
-    flash(f'user id is #{session["user_id"]}')
-    flash(f'this is template #{session["template_id"]}')
-
-    for pc in pc_temps:
-        flash(f'this is using photocards #{pc.photocard_id}')
-
     return render_template('template-creator.html', photocards=photocards, pc_temps=pc_temps)
 
 @app.route('/save_template', methods=["POST"])
@@ -104,13 +98,12 @@ def save_template():
     ids_from_template = request.form.getlist("pc_key[]")
     results = list(map(int, ids_from_template))
     print("PCS IN TEMPLATE HERE", pcs_in_template)
-    print(f' TEMPLATE ID HERE {session["template_id"]}')
-    print(results)
+    print("PCS RESULTS", results)
 
     for pc_id in results:
-        if pc_id not in pcs_in_template: #if the photocard is NOT in the template
+        if pc_id not in pcs_in_template: #if pc in list but NOT in the pc_picked table
             crud.create_pc_picked(session["template_id"], pc_id)
-        else: #if pc NOT in the array/list but IS in the pc_picked table
+        if pc_id in pcs_in_template: #if pc NOT in the list but IS in the pc_picked table
             crud.delete_pc_in_temp(session["template_id"], pc_id)
 
     return 'Your progress has been saved!'
