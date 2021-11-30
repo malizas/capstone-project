@@ -14,25 +14,30 @@
 {% endblock %}
 
 {% block body %}
-<div class="navbar">
-    {% if session.get("user_id") %}
+<nav class="navbar fixed-top navbar-light" style="background-color: #e9e9e9;">
+  <div class="container-fluid">
+      {% if session.get("user_id") %}
     <form action='/template_files'>
-      <button type="submit" id="back_files">Back to Files</button>
+      <button class="btn btn-sm btn-outline-secondary" type="submit" id="back_files">Back to Files</button>
     </form>
     {% else %}
     <form action='/'>
-      <button type="submit" id="back_home">Back to Homepage</button>
+      <button class="btn btn-sm btn-outline-secondary" type="submit" id="back_home">Back to Homepage</button>
     </form>
     {% endif %}
+
+    <img src="/static/images/icon.png" alt="" width="30" height="auto" class="d-inline-block align-text-top">
 
     {% if session.get("user_id") %}
     <form action='/save_template' id="save_template" method="POST">
-      <button type="submit" id="save_file">Save Template</button>
+      <button class="btn btn-sm btn-outline-secondary" type="submit" id="save_file">Save Template</button>
     </form>
     {% endif %}
   </div>
+</nav>
 
 <h2> template creator </h2>
+
 <div class="container">
   <div class="row">
       <div class="col-6" id="creator" style="border:1px solid gray; background-color: white;">
@@ -43,16 +48,18 @@
             <img src="{{pc.pc_img}}" id="cb{{pc.photocard_id}}" style="height:140px;width:auto;" />
             {% endfor %}
           </div>
-
       </div>
 
       <div class="col-1" id="divider"></div>
 
-      <div class="col-5" id="pick_pcs" style="border:1px solid gray;padding-right:0px;padding-left:0px;overflow:auto;">
+      <div class="col-5" id="pick_pcs" style="border:1px solid gray;padding-right:0px;padding-left:0px;overflow:auto; border-radius:8px;">
         <section id="photocards">
-          <div class="navbar">
+          <nav class="navbar fixed-top navbar-light" style="background-color: #e9e9e9;">
+            <div class="container-fluid">
               <input type="text" id="search" placeholder="search...">
-          </div>
+              <button class="btn btn-sm btn-outline-secondary" id="trash_all">Clear All</button>
+            </div>
+          </nav>
 
           <div id="all_photocards">
             <ul>
@@ -67,19 +74,12 @@
               </ul>
           </div>
         </section>
+        
         <section id="customize" style="display: none;">
-          <div class="navbar">
-            <button id="trash_all">Clear All</button>
-          </div>
           <ul>
             <li>
               <label>Change Title:</label>
               <input type="text" id="title_text" placeholder="my template creator">
-            </li>
-            <li>
-              <label>Change Title Size:</label>
-              <input type="range" min="1" max="100" value="20" id="title_size">
-              <span id="value"></span>
             </li>
             <li>
               <label>Change Title Alignment:</label>
@@ -120,6 +120,11 @@
           
           <ul>
             <li>
+              <label>Change Title Size:</label>
+              <input type="range" min="1" max="100" value="20" id="title_size">
+              <span id="value"></span>
+            </li>
+            <li>
               <label>Change Photocard Size:</label>
               <input type="range" min="100" max="300" value="140" id="pc_size">
               <span id="pc_value"></span>
@@ -127,11 +132,13 @@
           </ul>
         </section>
 
-        <div id="buttons">
-          <button id="save">Download Template</button>
-          <button id="to_customize">To Customization</button>
-          <button id="back" style="display: none;">Back</button>
-        </div>
+        <nav class="navbar fixed-bottom navbar-light" style="background-color: #e9e9e9; border-radius: 0px;">
+          <div class="container-fluid">
+            <button class="btn btn-sm btn-outline-secondary" id="save">Download Template</button>
+            <button class="btn btn-sm btn-outline-secondary" id="to_customize">To Customization</button>
+            <button class="btn btn-sm btn-outline-secondary" id="back" style="display: none;">Back</button>
+          </div>
+        </nav>
       </div>
 
   </div>

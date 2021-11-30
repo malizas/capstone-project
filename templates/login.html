@@ -10,14 +10,16 @@
 {% endblock %}
 
 {% block body %}
-<div class="navbar">
-  <form action='/'>
-    <button type="submit" id="home">Back to Homepage</button>
-  </form>
-  <form action='/template_creator'>
-    <button type="submit" id="to_templates">To Template Creator</button>
-  </form>
-</div>
+<nav class="navbar fixed-top navbar-light" style="background-color: #e9e9e9;">
+  <div class="container-fluid">
+    <form action='/'>
+      <button class="btn btn-sm btn-outline-secondary" type="submit" id="home">Back to Homepage</button>
+    </form>
+    <form action='/template_creator'>
+      <button class="btn btn-sm btn-outline-secondary" type="submit" id="to_templates">To Template Creator</button>
+    </form>
+  </div>
+</nav>
 
 <h2>Please login or register</h2>
 
@@ -25,36 +27,28 @@
   <div class="row" style="text-align: center;">
     <div class="col-2" id="divider"></div>
 
-    <div class="col-8" style="border:1px solid gray;padding-right:0px;padding-left:0px;">
-      <div class="navbar">
-        <button id="register">Register</button>
-        <button id="log" style="display: none;">Log In</button>
+    <div class="col-8" style="border:1px solid gray;padding-right:0px;padding-left:0px; border-radius:8px;">
+      <nav class="navbar">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Log In</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Register</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <form action="/login" id="log_user" method="POST">
+                <p> Email <input type="text" name="email"> </p>
+                <p> Password <input type="password" name="password"></p>
+                <p> <input class="btn btn-sm btn-outline-secondary" type="submit"> </p>
+              </form>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <form action="/user" id="register_user" method="POST">
+            <p> Email <input type="text" name="email"> </p>
+            <p> Password <input type="password" name="password"></p>
+            <p> <input class="btn btn-sm btn-outline-secondary" type="submit"> </p>
+        </div>
       </div>
-      <form action="/login" id="log_user" method="POST">
-        <h3>login</h3>
-        <p>
-          Email <input type="text" name="email">
-        </p>
-        <p>
-          Password <input type="password" name="password">
-        </p>
-        <p>
-          <input type="submit">
-        </p>
-      </form>
-      
-      <form action="/user" id="register_user" style="display:none;" method="POST">
-        <h3>register</h3>
-        <p>
-          Email <input type="text" name="email">
-        </p>
-        <p>
-          Password <input type="password" name="password">
-        </p>
-        <p>
-          <input type="submit">
-        </p>
-      </form>
     </div>
 
     <div class="col-2" id="divider"></div>

@@ -7,8 +7,8 @@ const addPCToContainer = (data,id) => {
 }
 
 // removes the pc that is unchecked
-const removePCFromContainer = (data) => {
-    $(`#picked img[src="${data}"]`).remove()
+const removePCFromContainer = (data, id) => {
+    $(`#picked img[src="${data}"] [id^="${id}"]`).remove()
 }
 
 // clears all pcs in the creator-container
@@ -23,7 +23,7 @@ $('input[type="checkbox"]').on('click', function() {
     if (this.checked) {
         addPCToContainer($(this).val(), $(this).attr('id'));
     } else {
-        removePCFromContainer($(this).val());
+        removePCFromContainer($(this).val(), $(this).attr('id'));
     };
 })
 

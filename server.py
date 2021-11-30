@@ -46,7 +46,6 @@ def user_login():
         session["user_email"] = user.email
         flash('Log in sucessful!')
     else:
-        flash('Login failed, please double check email or password')
         return redirect('/login')
 
     return redirect('/template_files')
@@ -107,8 +106,10 @@ def save_template():
     for pc_id in results:
         if pc_id not in pcs_in_template: #if pc in list but NOT in the pc_picked table
             crud.create_pc_picked(session["template_id"], pc_id)
-        if pc_id in pcs_in_template: #if pc NOT in the list but IS in the pc_picked table
-            crud.delete_pc_in_temp(session["template_id"], pc_id)
+    
+    for pc in pcs_in_template:
+        if pc not in results: #if pc NOT in the list but IS in the pc_picked table
+            crud.delete_pc_in_temp(session["template_id"], pc)
 
     return 'Your progress has been saved!'
 

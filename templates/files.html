@@ -3,15 +3,19 @@
 {% block title %}Files{% endblock %}
 
 {% block body %}
-<div class="navbar">
+<nav class="navbar fixed-top navbar-light" style="background-color: #e9e9e9;">
+  <div class="container-fluid">
     <form action="/logout" method="POST">
-        <button id="logout">Log Out</button>
+      <button class="btn btn-sm btn-outline-secondary" id="logout">Log Out</button>
     </form>
 
+    <img src="/static/images/icon.png" alt="" width="30" height="auto" class="d-inline-block align-text-top">
+    
     <form action='/create_template' id="new_template" method="POST">
-      <button type="submit" id="to_templates">Create a new Template</button>
+      <button class="btn btn-sm btn-outline-secondary" type="submit" id="to_templates">Create a new Template</button>
   </form>
-</div>
+  </div>
+</nav>
 
 <h2> template files </h2>
 
@@ -19,7 +23,7 @@
     <div class="row" style="text-align: center;">
       <div class="col-2" id="divider"></div>
   
-      <div class="col-8" style="border:1px solid gray;padding-right:0px;padding-left:0px;">
+      <div class="col-8" style="border:1px solid gray;padding-right:0px;padding-left:0px; border-radius:8px;">
         <div class="navbar">
           <p> Your Templates:</p>
         </div>
@@ -40,7 +44,7 @@
             </td>
             <td class="col-2">
               <form action="/delete_file/{{ temp.template_id }}" method="POST">
-                <button class="btn btn-danger" id="temp.template_id" onclick="return confirm('Do you want to permanently delete file {{ temp.template_id }}?');">Delete {{ temp.template_id }}</button>
+                <button class="btn btn-sm btn-danger" id="temp.template_id" onclick="return confirm('Do you want to permanently delete file {{ temp.template_id }}?');">Delete {{ temp.template_id }}</button>
               </form>
             </td>
           </tbody>

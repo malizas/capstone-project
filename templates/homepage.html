@@ -1,29 +1,33 @@
 {% extends 'base.html' %}
 
-{% block title %} Photocard Template - Home {% endblock %}
+{% block title %} K-Templates - Home {% endblock %}
 
 {% block body %}
-<div class="navbar">
-    <form action="/login">
-        <button type="submit" id="login">Login</button>
-    </form>
-    <form action="/template_creator">
-        <button id="continue as guest">Continue as Guest</button>
-    </form>
-</div>
+<nav class="navbar fixed-top navbar-light" style="background-color: #e9e9e9;">
+    <div class="container-fluid">
+        <form action="/login">
+            <button class="btn btn-sm btn-outline-secondary" type="submit" id="login">Login</button>
+        </form>
+        <img src="/static/images/icon.png" alt="" width="30" height="auto" class="d-inline-block align-text-top">
+        <form action="/template_creator">
+            <button class="btn btn-sm btn-outline-secondary" id="continue as guest">Continue as Guest</button>
+        </form>
+    </div>
+</nav>
 
 <div class="container" style="padding: 5px;">
     <div class="row">
       <div class="col-2" id="divider"></div>
   
-      <div class="col-8" id="homepage-content" style="border:1px solid gray;padding-right:0px;padding-left:0px;">
+      <div class="col-8" id="homepage-content" style="border:1px solid gray;padding-right:0px;padding-left:0px; border-radius:8px;">
         <div class="navbar">
             <h2> Home </h2>
         </div>
-            <img src="https://ibighit.com/bts/images/bts/discography/map_of_the_soul-persona/version02-01-m.jpg">
+            <img src="/static/images/logo.png" style="width:300px;height:auto">
             <p style="text-align: center;"> welcome to the very first k-pop template creator, where you can create
                 your own custom template that fits your style and look for specific photocards!
             </p>
+        
       </div>
   
       <div class="col-2" id="divider"></div>
