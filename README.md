@@ -1,4 +1,4 @@
-# K-Templates
+# <img src="/static/images/icon.png">
 K-Templates is a K-pop photocard collection template, where photocard collectors can customise their photocard wishlist to their liking. They are able to customise the photocards they want, and have almost full control of what their template looks like.
 
 ## Tables of Content
@@ -13,17 +13,44 @@ __Front-End__: HTML5, JavaScript, jQuery, Bootstrap <br>
 __Back-End__: Python, Flask, SQLAlchemy, PostgreSQL <br>
 
 ## <a href="#features"></a> Features
-Users can log in, or register an account if they want to save their files for later use.
-Otherwise, guests can create a simple template without a login.
-On the Template Creator, users can search through all of the photocards, or even search for their favorite member.
-When users click on the photocard that they want, it will be added to the template.
-When they picked all the photocards they want, they can customise the template.
-Here, they can dynamically change the title and the font of the template,
-And change the colors of the background or the font!
+Users can log in, or register an account if they want to save their files for later use. <br>
+Otherwise, guests can create a simple template without a login. <br>
+On the Template Creator, users can search through all of the photocards, or even search for their favorite member. <br>
+When users click on the photocard that they want, it will be added to the template. <br>
+When they picked all the photocards they want, they can customise the template. <br>
+Here, they can dynamically change the title and the font of the template, <br>
+And change the colors of the background or the font! <br>
 Lastly, using <a href="https://github.com/tsayen/dom-to-image">DOM-TO-IMAGE</a>, users can download their creation and have be of use on any social media platform they want for other collectors to know what photocards they are looking for!
 
-
 ## <a href="#installation"></a> Installation
+To have the site run on your local computer, please do the following:
+Clone Repository:
+```
+$ git clone https://github.com/malizas/k-templates.git
+```
+Create Virtual Environment:
+```
+$ virtualenv env
+```
+Activate the Virtual Environment:
+```
+$ source env/bin/activate
+```
+Install all necessary dependecies
+```
+$ pip3 install -r requirements.txt
+```
+Set up the Database:
+```
+$ createdb photocards
+$ python3 model.py
+$ python3 seed.py
+```
+Run the site:
+```
+$ python3 server.py
+```
+
 
 ## <a href="#future-features"></a> Future Features
 * Give users the ability to add their own photocards
