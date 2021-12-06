@@ -14,7 +14,7 @@ __Back-End__: Python, Flask, SQLAlchemy, PostgreSQL <br>
 
 ## <a href="#features"></a> Features
 Users can log in, or register an account if they want to save their files for later use. 
-![demo-gif(1)] (https://i.imgur.com/lUJG8kT.gif)<br>
+![demo-gif(1)](https://i.imgur.com/lUJG8kT.gif)<br>
 Otherwise, guests can create a simple template without a login. <br>
 On the Template Creator, users can search through all of the photocards, or even search for their favorite member. ![demo-gif(2)](https://i.imgur.com/tTCwuup.gif) <br>
 When they picked all the photocards they want, they can customise the template.<br>
