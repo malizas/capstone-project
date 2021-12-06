@@ -36,6 +36,7 @@
       </nav>
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <span> Have an account? Log in!</span>
             <form action="/login" id="log_user" method="POST">
                 <p> Email <input type="text" name="email"> </p>
                 <p> Password <input type="password" name="password"></p>
@@ -43,6 +44,10 @@
               </form>
         </div>
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <span> 
+            Don't have an account? Feel free to register! <br> 
+            With registering your account, you will gain the ability to save your creations for later use.
+          </span>
           <form action="/user" id="register_user" method="POST">
             <p> Email <input type="text" name="email"> </p>
             <p> Password <input type="password" name="password"></p>

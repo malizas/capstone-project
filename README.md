@@ -1,4 +1,4 @@
-# <img src="/static/images/icon.png">
+# <img src="/static/images/logo.png" style="width=200px; height=auto">
 K-Templates is a K-pop photocard collection template, where photocard collectors can customise their photocard wishlist to their liking. They are able to customise the photocards they want, and have almost full control of what their template looks like.
 
 ## Tables of Content
@@ -50,7 +50,7 @@ Run the site:
 ```
 $ python3 server.py
 ```
-
+To access the site, go to "localhost:5000/", and have fun creating your very own templates!
 
 ## <a href="#future-features"></a> Future Features
 * Give users the ability to add their own photocards
