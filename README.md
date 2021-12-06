@@ -1,4 +1,4 @@
-# <img src="/static/images/logo.png" style="width=200px; height=auto">
+# <img src="/static/images/logo.png" style="width:200px; height:auto">
 K-Templates is a K-pop photocard collection template, where photocard collectors can customise their photocard wishlist to their liking. They are able to customise the photocards they want, and have almost full control of what their template looks like.
 
 ## Tables of Content
