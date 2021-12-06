@@ -25,12 +25,12 @@ def user_registration():
     password = request.form.get('password')
 
     if crud.find_email(email):
-        flash('Use already exist, please try again or login')
-        return redirect('/login')
+        flash('User already exist, please try again or login')
     else:
         crud.create_user(email, password)
         flash('Registration complete, please login')
-        return redirect('/login')
+    
+    return redirect('/login')
 
 @app.route('/login', methods=['POST'])
 def user_login():

@@ -2,6 +2,12 @@ h2 {
     text-align: center;
 }
 
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .navbar {
     overflow: hidden;
     background-color: #e9e9e9;

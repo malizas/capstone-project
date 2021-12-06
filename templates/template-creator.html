@@ -26,7 +26,7 @@
     </form>
     {% endif %}
 
-    <img src="/static/images/icon.png" alt="" width="30" height="auto" class="d-inline-block align-text-top">
+    <img src="/static/images/icon.png" id="logo" alt="" width="30" height="auto">
 
     {% if session.get("user_id") %}
     <form action='/save_template' id="save_template" method="POST">
@@ -84,9 +84,9 @@
             <li>
               <label>Change Title Alignment:</label>
               
-              <button id="left-align">Left</button>
-              <button id="center-align">Center</button>
-              <button id="right-align">Right</button>
+              <button id="left-align" class="btn btn-sm btn-outline-secondary">Left</button>
+              <button id="center-align" class="btn btn-sm btn-outline-secondary">Center</button>
+              <button id="right-align" class="btn btn-sm btn-outline-secondary">Right</button>
             </li>
           </ul>
 
