@@ -3,7 +3,7 @@
 // whatever pc the user chooses will show up in the creator-container (left side of column)
 const addPCToContainer = (data,id) => {
     $('#picked').append(
-        `<img src="${data}" id="${id}" style="height:140px;width:auto;" />`)
+        `<img src="${data}" id="${id}" style="height:130px;width:auto;" />`)
 }
 
 // removes the pc that is unchecked
@@ -23,6 +23,7 @@ $('input[type="checkbox"]').on('click', function() {
     if (this.checked) {
         addPCToContainer($(this).val(), $(this).attr('id'));
     } else {
+        $(this).removeAttr("checked")
         removePCFromContainer($(this).val(), $(this).attr('id'));
     };
 })

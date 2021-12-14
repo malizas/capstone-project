@@ -2,6 +2,405 @@
     {
         "pc_name": "RM",
         "pc_group": "bts",
+        "pc_album": "O!RUL8,2?",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1638293804/photocards/BTS/ORUL82/rm_j2nqir.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "O!RUL8,2?",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1638293803/photocards/BTS/ORUL82/jin_rra87w.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "O!RUL8,2?",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1638293804/photocards/BTS/ORUL82/yoongi_ljoaco.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "O!RUL8,2?",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1638293802/photocards/BTS/ORUL82/jhope_hzjvrr.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "O!RUL8,2?",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1638293802/photocards/BTS/ORUL82/jimin_zdbdk4.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "O!RUL8,2?",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1638293805/photocards/BTS/ORUL82/tae_d0s9qf.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "O!RUL8,2?",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1638293803/photocards/BTS/ORUL82/jungkook_mnwylv.jpg"
+    },
+    {
+        "pc_name": "Group",
+        "pc_group": "bts",
+        "pc_album": "O!RUL8,2?",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293804/photocards/BTS/ORUL82/ot7_skrfok.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293878/photocards/BTS/Dark%20n%27%20Wild/rm_sr0h1q.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293876/photocards/BTS/Dark%20n%27%20Wild/jin_rharoj.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293878/photocards/BTS/Dark%20n%27%20Wild/suga_ibmtkq.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293875/photocards/BTS/Dark%20n%27%20Wild/jhope_dowttu.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293876/photocards/BTS/Dark%20n%27%20Wild/jimin_xjysw0.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293878/photocards/BTS/Dark%20n%27%20Wild/tae_wi7lti.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293877/photocards/BTS/Dark%20n%27%20Wild/jungkook_mps8gb.jpg"
+    },
+    {
+        "pc_name": "Group",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1638293877/photocards/BTS/Dark%20n%27%20Wild/ot7_cdqgd2.jpg"
+    },
+    {
+        "pc_name": "Group",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293878/photocards/BTS/Dark%20n%27%20Wild/ot7_3_wkealr.jpg"
+    },
+    {
+        "pc_name": "Group",
+        "pc_group": "bts",
+        "pc_album": "Dark N' Wild",
+        "pc_version": "ver3",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293878/photocards/BTS/Dark%20n%27%20Wild/ot7_2_mlwb6r.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "School Luv Affair",
+        "pc_version": "Original",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293904/photocards/BTS/SLA/rm_mfmt6e.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "School Luv Affair",
+        "pc_version": "Original",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293905/photocards/BTS/SLA/jin_dwfkfk.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "School Luv Affair",
+        "pc_version": "Original",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293905/photocards/BTS/SLA/suga_hdvpug.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "School Luv Affair",
+        "pc_version": "Original",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293906/photocards/BTS/SLA/jhope_hueigz.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "School Luv Affair",
+        "pc_version": "Original",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293908/photocards/BTS/SLA/jimin_rf3xzj.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "School Luv Affair",
+        "pc_version": "Original",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293905/photocards/BTS/SLA/tae_lq6ed7.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "School Luv Affair",
+        "pc_version": "Original",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1638293904/photocards/BTS/SLA/jungkook_e457n1.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 1",
+        "pc_version": "Pt.1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353520/photocards/BTS/HYYH/rm_stfyd9.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 1",
+        "pc_version": "Pt.1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353519/photocards/BTS/HYYH/jin_clngkz.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 1",
+        "pc_version": "Pt.1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353519/photocards/BTS/HYYH/yoongi_uqd3yk.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 1",
+        "pc_version": "Pt.1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353521/photocards/BTS/HYYH/hobi_ttb41n.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 1",
+        "pc_version": "Pt.1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353522/photocards/BTS/HYYH/jimin_rqezg0.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 1",
+        "pc_version": "Pt.1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353521/photocards/BTS/HYYH/tae_dfbzfo.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 1",
+        "pc_version": "Pt.1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353521/photocards/BTS/HYYH/jungkook_ttmmb2.jpg"
+    },
+    {
+        "pc_name": "Group",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 1",
+        "pc_version": "Pt.1",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1637353519/photocards/BTS/HYYH/ot7_ti7g4y.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 2",
+        "pc_version": "Pt.2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353545/photocards/BTS/HYYH/rm_uvrsre.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 2",
+        "pc_version": "Pt.2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353543/photocards/BTS/HYYH/jin_m1qdv8.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 2",
+        "pc_version": "Pt.2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353546/photocards/BTS/HYYH/yoongi_p26z7p.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 2",
+        "pc_version": "Pt.2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353547/photocards/BTS/HYYH/jhope_lvbzlr.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 2",
+        "pc_version": "Pt.2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353546/photocards/BTS/HYYH/jimin_a1b8iw.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 2",
+        "pc_version": "Pt.2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353544/photocards/BTS/HYYH/tae_tvj4ja.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 2",
+        "pc_version": "Pt.2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353544/photocards/BTS/HYYH/jungkook_bjbomu.jpg"
+    },
+    {
+        "pc_name": "Group",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Part 2",
+        "pc_version": "Pt.2",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353546/photocards/BTS/HYYH/ot7_c3b5lw.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Young Forever",
+        "pc_version": "Young Forever",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353562/photocards/BTS/HYYH/rm_g66gmr.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Young Forever",
+        "pc_version": "Young Forever",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353563/photocards/BTS/HYYH/jin_bibyhv.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Young Forever",
+        "pc_version": "Young Forever",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353562/photocards/BTS/HYYH/yoongi_zqqhvp.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Young Forever",
+        "pc_version": "Young Forever",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353561/photocards/BTS/HYYH/jhope_bugk1i.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Young Forever",
+        "pc_version": "Young Forever",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353563/photocards/BTS/HYYH/jimin_pkcr8p.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Young Forever",
+        "pc_version": "Young Forever",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353561/photocards/BTS/HYYH/tae_klredu.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Young Forever",
+        "pc_version": "Young Forever",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353560/photocards/BTS/HYYH/jungkook_qp77op.jpg"
+    },
+    {
+        "pc_name": "Group",
+        "pc_group": "bts",
+        "pc_album": "HYYH: Young Forever",
+        "pc_version": "Young Forever",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637353560/photocards/BTS/HYYH/ot7_gosemc.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "You Never Walk Alone",
+        "pc_version": "verLeft",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637084233/photocards/BTS/You%20Never%20Walk%20Alone/rm_dc3xyi.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "You Never Walk Alone",
+        "pc_version": "verLeft",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637084233/photocards/BTS/You%20Never%20Walk%20Alone/jin_ibehfk.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "You Never Walk Alone",
+        "pc_version": "verLeft",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637084233/photocards/BTS/You%20Never%20Walk%20Alone/yoongi_wlgnwk.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "You Never Walk Alone",
+        "pc_version": "verLeft",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637084233/photocards/BTS/You%20Never%20Walk%20Alone/hobi_acodch.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "You Never Walk Alone",
+        "pc_version": "verLeft",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637084233/photocards/BTS/You%20Never%20Walk%20Alone/jimin_qnkygf.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "You Never Walk Alone",
+        "pc_version": "verLeft",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637084233/photocards/BTS/You%20Never%20Walk%20Alone/tae_fzpwvv.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "You Never Walk Alone",
+        "pc_version": "verLeft",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637084233/photocards/BTS/You%20Never%20Walk%20Alone/jungkook_jyg9b6.jpg"
+    },
+    {
+        "pc_name": "Group",
+        "pc_group": "bts",
+        "pc_album": "You Never Walk Alone",
+        "pc_version": "verLeft",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/a_90/v1637084233/photocards/BTS/You%20Never%20Walk%20Alone/ot7_s6gcvu.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
         "pc_album": "Love Yourself Her",
         "pc_version": "verL",
         "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1635869728/photocards/BTS/Love%20Yourself%20Her/rm_ymhjks.jpg"
@@ -978,5 +1377,54 @@
         "pc_album": "Map of the Soul: 7",
         "pc_version": "ver4",
         "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1637083183/photocards/BTS/Map%20of%20the%20Soul:%207/jungkook_emyaqy.jpg"
+    },
+    {
+        "pc_name": "RM",
+        "pc_group": "bts",
+        "pc_album": "BE",
+        "pc_version": "Essential",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1639429841/photocards/BTS/BE%28Essential%29/rm_i3qbqv.jpg"
+    },
+    {
+        "pc_name": "Jin",
+        "pc_group": "bts",
+        "pc_album": "BE",
+        "pc_version": "Essential",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1639429841/photocards/BTS/BE%28Essential%29/jin_l8mwjl.jpg"
+    },
+    {
+        "pc_name": "SUGA",
+        "pc_group": "bts",
+        "pc_album": "BE",
+        "pc_version": "Essential",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1639429842/photocards/BTS/BE%28Essential%29/yoongi_segtne.jpg"
+    },
+    {
+        "pc_name": "j-hope",
+        "pc_group": "bts",
+        "pc_album": "BE",
+        "pc_version": "Essential",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1639429841/photocards/BTS/BE%28Essential%29/hobi_tmoex6.jpg"
+    },
+    {
+        "pc_name": "Jimin",
+        "pc_group": "bts",
+        "pc_album": "BE",
+        "pc_version": "Essential",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1639429841/photocards/BTS/BE%28Essential%29/jimin_f43d91.jpg"
+    },
+    {
+        "pc_name": "V",
+        "pc_group": "bts",
+        "pc_album": "BE",
+        "pc_version": "Essential",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1639429842/photocards/BTS/BE%28Essential%29/tae_zoy8ks.jpg"
+    },
+    {
+        "pc_name": "Jungkook",
+        "pc_group": "bts",
+        "pc_album": "BE",
+        "pc_version": "Essential",
+        "pc_img": "https://res.cloudinary.com/misaaya/image/upload/v1639429842/photocards/BTS/BE%28Essential%29/jk_yabuyp.jpg"
     }
 ]
