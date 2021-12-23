@@ -42,6 +42,7 @@
   <div class="row">
       <div class="col-6" id="creator" style="border:1px solid gray; background-color: white;">
           <h2 id="title" style="padding:10px"> my template creator</h2>
+          <div id="desc">this is the description of my template</div>
           
           <div id="picked">
             {% for pc in pc_temps %}
@@ -83,10 +84,22 @@
             </li>
             <li>
               <label>Change Title Alignment:</label>
-              
               <button id="left-align" class="btn btn-sm btn-outline-secondary">Left</button>
               <button id="center-align" class="btn btn-sm btn-outline-secondary">Center</button>
               <button id="right-align" class="btn btn-sm btn-outline-secondary">Right</button>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <label> Change Description Text:</label>
+              <textarea cols="30" rows="3" id="desc_text" placeholder="this is my template description"></textarea>
+            </li>
+            <li>
+              <label>Change Description Alignment:</label>
+              <button id="left-desc" class="btn btn-sm btn-outline-secondary">Left</button>
+              <button id="center-desc" class="btn btn-sm btn-outline-secondary">Center</button>
+              <button id="right-desc" class="btn btn-sm btn-outline-secondary">Right</button>
             </li>
           </ul>
 

@@ -5,6 +5,11 @@ $('#title_text').on('input', function() {
   $('#title').text($('#title_text').val());
 })
 
+//change text of description
+$('#desc_text').on('input', function() {
+  $('#desc').text($('#desc_text').val());
+})
+
 //title font size
 const slider = $('#title_size');
 $('#value').html(slider.val());
@@ -27,6 +32,19 @@ $('#right-align').on('click', function() {
   $('#title').css('text-align', 'right');
 })
 
+//change description alignment
+$('#left-desc').on('click', function() {
+  $('#desc').css('text-align', 'left');
+})
+
+$('#center-desc').on('click', function() {
+  $('#desc').css('text-align', 'center');
+})
+
+$('#right-desc').on('click', function() {
+  $('#desc').css('text-align', 'right');
+})
+
 //change background color
 $('#bg-color').change(function() {
   $('#creator').css('background', $(this).val());
@@ -35,11 +53,13 @@ $('#bg-color').change(function() {
 //change font color
 $('#font-color').change(function(){
   $('#title').css('color', $(this).val());
+  $('#desc').css("font-family", $(this).val());
 })
 
 //change fonts
 $('#font-family').change(function () {
   $('#title').css("font-family", $(this).val());
+  $('#desc').css("font-family", $(this).val());
 });
 
 //change image size

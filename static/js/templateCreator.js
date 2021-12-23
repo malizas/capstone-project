@@ -8,8 +8,14 @@ const addPCToContainer = (data,id) => {
 
 // removes the pc that is unchecked
 const removePCFromContainer = (data, id) => {
-    $(`#picked img[src="${data}"] [id^="${id}"]`).remove()
+    $(`#picked img[src="${data}"] [id="${id}"]`).remove()
 }
+
+// remove pc when cliked on in template
+$('#picked img').on('click', function() {
+    $(this).remove()
+    $('input[type="checkbox"]').prop('checked', false);
+})
 
 // clears all pcs in the creator-container
 $('#trash_all').on('click', function() {
